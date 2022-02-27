@@ -1,6 +1,6 @@
 package respositories;
 
-import model.TestPuppy;
+import model.Breed;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -10,8 +10,8 @@ import java.util.List;
 import org.hibernate.query.Query;
 
 
-public class TestPuppyRepository {
-    public boolean addPuppy(TestPuppy p){
+public class BreedRepository {
+    public boolean addBreed(Breed p){
         try {
             Session session = HibernateUtil.getSession();
             Transaction transaction = session.beginTransaction();
@@ -25,10 +25,10 @@ public class TestPuppyRepository {
         }
         return false;
     }
-    public List<TestPuppy> getAllPuppies(){
+    public List<Breed> getAllBreeds(){
         try {
             Session session = HibernateUtil.getSession();
-            List<TestPuppy> puppyList = session.createQuery("FROM TestPuppy", TestPuppy.class).list();
+            List<Breed> puppyList = session.createQuery("FROM breeds", Breed.class).list();
             session.close();
             return puppyList;
         }catch(HibernateException | IOException e){
@@ -38,15 +38,15 @@ public class TestPuppyRepository {
         return null;
     }
 
-    public TestPuppy getPuppyById(int id){
+    public Breed getBreedById(int id){
         try {
             Session session = HibernateUtil.getSession();
-            Query query = session.createQuery("FROM TestPuppy WHERE puppy_id = :id", TestPuppy.class);
+            Query query = session.createQuery("FROM Breed WHERE breed_id = :id", Breed.class);
             query.setParameter("id", id);
-            List<TestPuppy> puppyList = query.list();
+            List<Breed> breedList = query.list();
             session.close();
-            if(puppyList.size()==1){
-                return puppyList.get(0);
+            if(breedList.size()==1){
+                return breedList.get(0);
             }else{
                 return null;
             }

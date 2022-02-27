@@ -1,36 +1,23 @@
 package application;
 
-import model.TestPuppy;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
-import services.TestPuppyService;
-
-import java.util.List;
+import model.Menu;
+import services.BreedService;
 
 public class Application {
     public static void main(String[] args){
 
-        TestPuppyService tps =  new TestPuppyService();
+        BreedService bs =  new BreedService();
 
-        System.out.println(tps.getPuppyById(1222).toString());
+        Menu mainMenu = new Menu();
+        mainMenu.createMenu();
 
-//        TestPuppy tp3 = new TestPuppy();
-//        tp3.setPuppy_id(1224);
-//        tp3.setPuppy_name("Bailey");
-//        tp3.setPuppy_breed("Havanese");
+//        Puppy newPuppy = new Puppy();
 //
-//        TestPuppy tp4 = new TestPuppy();
-//        tp4.setPuppy_id(1225);
-//        tp4.setPuppy_name("Coda");
-//        tp4.setPuppy_breed("German Shepherd");
 //
-//        tps.addPuppy(tp3);
-//        tps.addPuppy(tp4);
 //
-//        List<TestPuppy> myPuppies = tps.getAllPuppies();
-//        for(TestPuppy tp : myPuppies){
-//            System.out.println(tp);
+//        List<Puppy> allBreeds = ps.getAllPuppies();
+//        for(Puppy p : myPuppies){
+//            System.out.println(p);
 //        }
 
     }
