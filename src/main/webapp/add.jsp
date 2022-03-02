@@ -7,10 +7,7 @@
 <body bgcolor="skyblue">
 
 <%
-            int t1 = Integer.parseInt(request.getParameter("t1"));
-            int t2 = Integer.parseInt(request.getParameter("t2"));
-            int result = t1+t2;
-            out.println(t1+" + "+t2+" = "+ result);
+
 %>
 </body>
 </html>

@@ -57,4 +57,15 @@ public class BreedRepository {
         }
         return null;
     }
+
+    public List<Breed> getBestBreedsForUser(String size, String temperament, String sheds) throws IOException {
+        Session session = HibernateUtil.getSession();
+        Query query = session.createQuery("FROM Breed WHERE size = :size AND temperament = :temperament AND sheds = :sheds", Breed.class);
+        query.setParameter("size", size);
+        query.setParameter("temperament", temperament);
+        query.setParameter("sheds", sheds);
+        List<Breed> breedList = query.list();
+        session.close();
+        return breedList;
+    }
 }
