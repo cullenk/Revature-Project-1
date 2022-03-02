@@ -20,7 +20,7 @@ public class BreedService {
     }
 
     public boolean addBreed(Breed b){
-        if(br.getBreedById(b.getId()) == null){
+        if(br.getBreedById(b.getBreed_id()) == null){
             return br.addBreed(b);
         }else{
             return false;

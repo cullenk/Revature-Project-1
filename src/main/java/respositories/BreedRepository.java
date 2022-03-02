@@ -25,12 +25,13 @@ public class BreedRepository {
         }
         return false;
     }
+
     public List<Breed> getAllBreeds(){
         try {
             Session session = HibernateUtil.getSession();
-            List<Breed> puppyList = session.createQuery("FROM breeds", Breed.class).list();
+            List<Breed> breedList = session.createQuery("FROM breeds", Breed.class).list();
             session.close();
-            return puppyList;
+            return breedList;
         }catch(HibernateException | IOException e){
             e.printStackTrace();
         }finally{

@@ -2,6 +2,9 @@ package model;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
 import javax.persistence.*;
 import javax.persistence.Id;
@@ -15,6 +18,11 @@ import javax.persistence.Id;
         generator = ObjectIdGenerators.PropertyGenerator.class,
         property = "id"
 )
+
+//Lombok annotations
+@Getter
+@Setter
+@ToString
 public class Breed {
 
     @Id
@@ -27,57 +35,4 @@ public class Breed {
     public String size;
     public String sheds;
 
-
-    //Getters and Setters
-
-    public int getId() {
-        return breed_id;
-    }
-
-    public void setId(int id) {
-        this.breed_id = id;
-    }
-
-    public String getBreed() {
-        return breed;
-    }
-
-    public void setBreed(String breed) {
-        this.breed = breed;
-    }
-
-    public String getTemperament() {
-        return temperament;
-    }
-
-    public void setTemperament(String temperament) {
-        this.temperament = temperament;
-    }
-
-    public String getSize() {
-        return size;
-    }
-
-    public void setSize(String size) {
-        this.size = size;
-    }
-
-    public String getSheds() {
-        return sheds;
-    }
-
-    public void setSheds(String sheds) {
-        this.sheds = sheds;
-    }
-
-    @Override
-    public String toString() {
-        return "Breed{" +
-                "id=" + breed_id +
-                ", breed='" + breed + '\'' +
-                ", temperament='" + temperament + '\'' +
-                ", size='" + size + '\'' +
-                ", sheds='" + sheds + '\'' +
-                '}';
-    }
 }

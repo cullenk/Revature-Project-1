@@ -23,7 +23,8 @@ public class HibernateUtil {
             props.load(loader.getResourceAsStream("hibernate.properties"));
             configuration.setProperties(props);
 
-            //Classes that will use this connection session. Each one should have an @Entity annotation tag to link them
+            //Classes that will use this connection session. Each one should have an @Entity annotation tag to link them. This wouldn't be necessary if using
+            //a cfg.xml file instead of properties. We'd just define the mapping there.
             configuration.addAnnotatedClass(Breed.class);
 
             // ServiceRegistry to accept the connection and actually build it
