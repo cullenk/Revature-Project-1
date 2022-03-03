@@ -1,24 +1,37 @@
-<%@ page import="model.Breed" %>
+<%@ page import="model.Breed" import="org.apache.catalina.filters.ExpiresFilter.XPrintWriter" %>
+<%@ page import="java.io.PrintWriter" %>
 <%@ page import="java.util.List" %>
 <%@ page contentType="text/html;charset=UTF-8" %>
+<%@ include file="header.jsp" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>JSP Page</title>
 </head>
 <body style="background-color: aqua">
 
-<h1>Inside the JSP File</h1>
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+    }
+</style>
 
 <%
-    System.out.println("Hello World");
-//    System.out.print("Here are some breeds that may be best suited for you:");
-//    List<Breed> breedList = (List<Breed>) request.getAttribute("returnedBreeds");
-//
-//    for(Breed b : breedList){
-//        System.out.println(b.breed);
-//    }
-
+    String firstName = (String) request.getAttribute("firstName");
+    String lastName = (String) request.getAttribute("lastName");
+    List<Breed> breedList = (List<Breed>) request.getAttribute("returnedBreeds");
 %>
+<h1>Hi <%=firstName + " " + lastName%>, here are some breeds that will suit you best. Please select whichever one you would like!</h1>
+
+<form action="nameAndGender" method="post">
+    <%
+        for (Breed b : breedList){
+    %>
+    <input type="radio" name="chosenBreed" value="<%=b.breed%>">
+    <label for="<%=b.breed%>"><%=b.breed%></label><br/>
+    <%}%>
+    <input type="submit" value="Next">
+</form>
 
 </body>
 </html>

@@ -7,26 +7,96 @@
 <body>
     <style>
         body {
+            margin: 0;
+            padding: 0;
         display: flex;
+            flex-direction: column;
         justify-content: center;
         align-items: center;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        h2 {
+            margin: 10px 0;
         }
 
         .form-container {
             background: skyblue;
             padding: 20px;
+            margin: 20px;
         }
+
+        .forms-main-container{
+
+        }
+
+         .header-div {
+             width: 100%;
+             padding: 25px;
+             display: flex;
+             flex-direction: column;
+             align-items: center;
+             justify-content: center;
+             background-color: black;
+             color: white;
+         }
     </style>
-    <div class="form-container">
-        <form action="initialQuestions" method="post">
-            What's your first name? <input type="text" name="firstName"><br>
-            What's your last name? <input type="text" name="lastName"><br>
-            Do you want a puppy that will grow to be small, medium or large in size? <input type="text" name="size"><br>
-            Would you like your puppy to be more mellow or active in nature? <input type="text" name="temperament"><br>
-            Would you prefer if your puppy shed a lot or a little? <input type="text" name="temperament"><br>
-            <input type="submit" value="submit">
-        </form>
+    <div class="header-div">
+        <p>Puppy Adoption App</p>
+        <a href="index.html">Home</a>
     </div>
+
+    <div class="forms-main-container">
+        <div class="form-container">
+            <h2>Adopt a Puppy</h2>
+            <form action="initialQuestions" method="post">
+                What's your first name? <input type="text" name="firstName"><br>
+                What's your last name? <input type="text" name="lastName"><br>
+                Do you want a puppy that will grow to be small, medium or large in size? <input type="text" name="size"><br>
+                Would you like your puppy to be more mellow or active in nature? <input type="text" name="temperament"><br>
+                Would you prefer if your puppy shed a lot or a little? <input type="text" name="sheds"><br>
+                <input type="submit" value="submit">
+            </form>
+        </div>
+        <div class="form-container">
+            <h2>Look Up Adoption Records</h2>
+            <form action="initialQuestions" method="post">
+                What's your first name? <input type="text" name="firstName"><br>
+                What's your last name? <input type="text" name="lastName"><br>
+                Do you want a puppy that will grow to be small, medium or large in size? <input type="text" name="size"><br>
+                Would you like your puppy to be more mellow or active in nature? <input type="text" name="temperament"><br>
+                Would you prefer if your puppy shed a lot or a little? <input type="text" name="sheds"><br>
+                <input type="submit" value="submit">
+            </form>
+        </div>
+        <div class="form-container">
+            <h2>View Popular Breeds</h2>
+            <form action="initialQuestions" method="post">
+                What's your first name? <input type="text" name="firstName"><br>
+                What's your last name? <input type="text" name="lastName"><br>
+                Do you want a puppy that will grow to be small, medium or large in size? <input type="text" name="size"><br>
+                Would you like your puppy to be more mellow or active in nature? <input type="text" name="temperament"><br>
+                Would you prefer if your puppy shed a lot or a little? <input type="text" name="sheds"><br>
+                <input type="submit" value="submit">
+            </form>
+        </div>
+        <div class="form-container">
+            <h2>Delete An Adoption Record</h2>
+            <form action="initialQuestions" method="post">
+                What's your first name? <input type="text" name="firstName"><br>
+                What's your last name? <input type="text" name="lastName"><br>
+                Do you want a puppy that will grow to be small, medium or large in size? <input type="text" name="size"><br>
+                Would you like your puppy to be more mellow or active in nature? <input type="text" name="temperament"><br>
+                Would you prefer if your puppy shed a lot or a little? <input type="text" name="sheds"><br>
+                <input type="submit" value="submit">
+            </form>
+        </div>
+    </div>
+
 
 
 </body>
