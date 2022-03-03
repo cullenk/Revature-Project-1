@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="myDatabase@cullensfirstserver.database.windows.net">
+  <database-model serializer="dbm" dbms="AZURE" family-id="AZURE" format-version="4.32">
+    <root id="1">
+      <Dbms>AZURE</Dbms>
+      <ServerVersion>12.0.2327</ServerVersion>
+    </root>
+    <database id="2" parent="1" name="master">
+      <ObjectId>1</ObjectId>
+    </database>
+    <database id="3" parent="1" name="myDatabase">
+      <Collation>SQL_Latin1_General_CP1_CI_AS</Collation>
+      <Current>1</Current>
+      <Fingerprint>5.44605/F755F082-48EC-4C78-92B6-DCA4B892E8A0@cullensfirstserver</Fingerprint>
+      <Grants>5|database||1|connect|G</Grants>
+      <ObjectId>5</ObjectId>
+      <PermissionsCheckSum>1059020366</PermissionsCheckSum>
+    </database>
+    <login id="4" parent="1" name="##MS_DefinitionReader##">
+      <Enabled>1</Enabled>
+      <ObjectId>13</ObjectId>
+      <Type>server-role</Type>
+    </login>
+    <login id="5" parent="1" name="##MS_ServerStateManager##">
+      <Enabled>1</Enabled>
+      <ObjectId>12</ObjectId>
+      <Type>server-role</Type>
+    </login>
+    <login id="6" parent="1" name="##MS_ServerStateReader##">
+      <Enabled>1</Enabled>
+      <ObjectId>11</ObjectId>
+      <Type>server-role</Type>
+    </login>
+    <role id="7" parent="3" name="public">
+      <AuthType>none</AuthType>
+      <ObjectId>0</ObjectId>
+      <Type>database-role</Type>
+      <OwnerId>1</OwnerId>
+    </role>
+    <role id="8" parent="3" name="dbo">
+      <AuthType>instance</AuthType>
+      <DefaultSchema>dbo</DefaultSchema>
+      <ObjectId>1</ObjectId>
+    </role>
+    <role id="9" parent="3" name="guest">
+      <AuthType>none</AuthType>
+      <DefaultSchema>guest</DefaultSchema>
+      <ObjectId>2</ObjectId>
+    </role>
+    <role id="10" parent="3" name="INFORMATION_SCHEMA">
+      <AuthType>none</AuthType>
+      <ObjectId>3</ObjectId>
+    </role>
+    <role id="11" parent="3" name="sys">
+      <AuthType>none</AuthType>
+      <ObjectId>4</ObjectId>
+    </role>
+    <role id="12" parent="3" name="db_owner">
+      <AuthType>none</AuthType>
+      <ObjectId>16384</ObjectId>
+      <Type>database-role</Type>
+      <OwnerId>1</OwnerId>
+    </role>
+    <role id="13" parent="3" name="db_accessadmin">
+      <AuthType>none</AuthType>
+      <ObjectId>16385</ObjectId>
+      <Type>database-role</Type>
+      <OwnerId>1</OwnerId>
+    </role>
+    <role id="14" parent="3" name="db_securityadmin">
+      <AuthType>none</AuthType>
+      <ObjectId>16386</ObjectId>
+      <Type>database-role</Type>
+      <OwnerId>1</OwnerId>
+    </role>
+    <role id="15" parent="3" name="db_ddladmin">
+      <AuthType>none</AuthType>
+      <ObjectId>16387</ObjectId>
+      <Type>database-role</Type>
+      <OwnerId>1</OwnerId>
+    </role>
+    <role id="16" parent="3" name="db_backupoperator">
+      <AuthType>none</AuthType>
+      <ObjectId>16389</ObjectId>
+      <Type>database-role</Type>
+      <OwnerId>1</OwnerId>
+    </role>
+    <role id="17" parent="3" name="db_datareader">
+      <AuthType>none</AuthType>
+      <ObjectId>16390</ObjectId>
+      <Type>database-role</Type>
+      <OwnerId>1</OwnerId>
+    </role>
+    <role id="18" parent="3" name="db_datawriter">
+      <AuthType>none</AuthType>
+      <ObjectId>16391</ObjectId>
+      <Type>database-role</Type>
+      <OwnerId>1</OwnerId>
+    </role>
+    <role id="19" parent="3" name="db_denydatareader">
+      <AuthType>none</AuthType>
+      <ObjectId>16392</ObjectId>
+      <Type>database-role</Type>
+      <OwnerId>1</OwnerId>
+    </role>
+    <role id="20" parent="3" name="db_denydatawriter">
+      <AuthType>none</AuthType>
+      <ObjectId>16393</ObjectId>
+      <Type>database-role</Type>
+      <OwnerId>1</OwnerId>
+    </role>
+    <schema id="21" parent="3" name="INFORMATION_SCHEMA">
+      <ObjectId>3</ObjectId>
+    </schema>
+    <schema id="22" parent="3" name="db_accessadmin">
+      <ObjectId>16385</ObjectId>
+    </schema>
+    <schema id="23" parent="3" name="db_backupoperator">
+      <ObjectId>16389</ObjectId>
+    </schema>
+    <schema id="24" parent="3" name="db_datareader">
+      <ObjectId>16390</ObjectId>
+    </schema>
+    <schema id="25" parent="3" name="db_datawriter">
+      <ObjectId>16391</ObjectId>
+    </schema>
+    <schema id="26" parent="3" name="db_ddladmin">
+      <ObjectId>16387</ObjectId>
+    </schema>
+    <schema id="27" parent="3" name="db_denydatareader">
+      <ObjectId>16392</ObjectId>
+    </schema>
+    <schema id="28" parent="3" name="db_denydatawriter">
+      <ObjectId>16393</ObjectId>
+    </schema>
+    <schema id="29" parent="3" name="db_owner">
+      <ObjectId>16384</ObjectId>
+    </schema>
+    <schema id="30" parent="3" name="db_securityadmin">
+      <ObjectId>16386</ObjectId>
+    </schema>
+    <schema id="31" parent="3" name="dbo">
+      <Current>1</Current>
+      <IntrospectionTimestamp>2022-03-02.19:16:32.130</IntrospectionTimestamp>
+      <ObjectId>1</ObjectId>
+    </schema>
+    <schema id="32" parent="3" name="guest">
+      <ObjectId>2</ObjectId>
+    </schema>
+    <schema id="33" parent="3" name="sys">
+      <ObjectId>4</ObjectId>
+    </schema>
+    <table id="34" parent="31" name="adoption_history">
+      <CreatedTimestamp>2022-02-19.11:49:26.833</CreatedTimestamp>
+      <ModifiedTimestamp>2022-02-19.11:49:26.833</ModifiedTimestamp>
+      <ObjectId>210099789</ObjectId>
+    </table>
+    <table id="35" parent="31" name="breeds">
+      <CreatedTimestamp>2022-02-27.15:31:36.967</CreatedTimestamp>
+      <ModifiedTimestamp>2022-02-27.15:31:36.967</ModifiedTimestamp>
+      <ObjectId>754101727</ObjectId>
+    </table>
+    <table id="36" parent="31" name="puppy">
+      <CreatedTimestamp>2022-02-20.17:09:02.953</CreatedTimestamp>
+      <ModifiedTimestamp>2022-02-20.17:09:02.953</ModifiedTimestamp>
+      <ObjectId>242099903</ObjectId>
+    </table>
+    <column id="37" parent="34" name="adopter_id">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <SequenceIdentity>1(16)</SequenceIdentity>
+    </column>
+    <column id="38" parent="34" name="first_name">
+      <DataType>varchar(40 char)|0s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="39" parent="34" name="last_name">
+      <DataType>varchar(40 char)|0s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="40" parent="34" name="puppy_breed">
+      <DataType>varchar(40 char)|0s</DataType>
+      <Position>4</Position>
+    </column>
+    <column id="41" parent="34" name="puppy_gender">
+      <DataType>varchar(40 char)|0s</DataType>
+      <Position>5</Position>
+    </column>
+    <column id="42" parent="34" name="puppy_name">
+      <DataType>varchar(40 char)|0s</DataType>
+      <Position>6</Position>
+    </column>
+    <index id="43" parent="34" name="PK__adoption__48E2C9815978109F">
+      <Clustering>1</Clustering>
+      <ColNames>adopter_id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Position>1</Position>
+      <Unique>1</Unique>
+    </index>
+    <key id="44" parent="34" name="PK__adoption__48E2C9815978109F">
+      <ColNames>adopter_id</ColNames>
+      <CreatedTimestamp>2022-02-19.11:49:26.900</CreatedTimestamp>
+      <ModifiedTimestamp>2022-02-19.11:49:26.900</ModifiedTimestamp>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>226099846</ObjectId>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PK__adoption__48E2C9815978109F</UnderlyingIndexName>
+    </key>
+    <column id="45" parent="35" name="breed_id">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <SequenceIdentity>1(46)</SequenceIdentity>
+    </column>
+    <column id="46" parent="35" name="breed">
+      <DataType>varchar(255 char)|0s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="47" parent="35" name="sheds">
+      <DataType>varchar(255 char)|0s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="48" parent="35" name="size">
+      <DataType>varchar(255 char)|0s</DataType>
+      <Position>4</Position>
+    </column>
+    <column id="49" parent="35" name="temperament">
+      <DataType>varchar(255 char)|0s</DataType>
+      <Position>5</Position>
+    </column>
+    <index id="50" parent="35" name="PK__breeds__9C021435973A8669">
+      <Clustering>1</Clustering>
+      <ColNames>breed_id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Position>1</Position>
+      <Unique>1</Unique>
+    </index>
+    <key id="51" parent="35" name="PK__breeds__9C021435973A8669">
+      <ColNames>breed_id</ColNames>
+      <CreatedTimestamp>2022-02-27.15:31:36.967</CreatedTimestamp>
+      <ModifiedTimestamp>2022-02-27.15:31:36.967</ModifiedTimestamp>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>770101784</ObjectId>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PK__breeds__9C021435973A8669</UnderlyingIndexName>
+    </key>
+    <column id="52" parent="36" name="id">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <SequenceIdentity>1(49)</SequenceIdentity>
+    </column>
+    <column id="53" parent="36" name="breed">
+      <DataType>varchar(40 char)|0s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="54" parent="36" name="temperament">
+      <DataType>varchar(40 char)|0s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="55" parent="36" name="size">
+      <DataType>varchar(40 char)|0s</DataType>
+      <Position>4</Position>
+    </column>
+    <column id="56" parent="36" name="sheds">
+      <DataType>varchar(40 char)|0s</DataType>
+      <Position>5</Position>
+    </column>
+    <index id="57" parent="36" name="PK__puppy__3213E83F6FFF670C">
+      <Clustering>1</Clustering>
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Position>1</Position>
+      <Unique>1</Unique>
+    </index>
+    <key id="58" parent="36" name="PK__puppy__3213E83F6FFF670C">
+      <ColNames>id</ColNames>
+      <CreatedTimestamp>2022-02-20.17:09:03</CreatedTimestamp>
+      <ModifiedTimestamp>2022-02-20.17:09:03</ModifiedTimestamp>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>258099960</ObjectId>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PK__puppy__3213E83F6FFF670C</UnderlyingIndexName>
+    </key>
+  </database-model>
+</dataSource>

@@ -3,6 +3,7 @@ package servlets;
 import model.Breed;
 import services.BreedService;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -17,9 +18,8 @@ public class InitialQuestionsServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter out = response.getWriter();
-        out.println("Welcome to the Initial Questions Servlet!");
+        out.println("Inside Initial Questions Servlet");
 
-        int breedId = Integer.parseInt(request.getParameter("breedId"));
         String firstName = request.getParameter("firstName");
         String lastName = request.getParameter("lastName");
         String size = request.getParameter("size");
@@ -27,19 +27,23 @@ public class InitialQuestionsServlet extends HttpServlet {
         String sheds = request.getParameter("sheds");
 
         BreedService breedService = new BreedService();
-        List<Breed> queryResult = breedService.getBestBreedsForUser(size, temperament, sheds);
+        List<Breed> returnedBreeds = breedService.getBestBreedsForUser(size, temperament, sheds);
 
-        out.println("Here are some breeds that may be best suited for you:");
-        for(Breed b : queryResult){
-            out.println(b.breed);
-        }
+        //Set the queried list to a value to pass along
+        request.setAttribute("returnedBreeds", returnedBreeds);
 
-        //Set the addition result to a value to pass along
-//        request.setAttribute("result", result);
+        //Forward to response data to .jsp file.
+        RequestDispatcher rd = request.getRequestDispatcher("initialQuestions.jsp");
+        rd.forward(request, response);
 
-        //Forward to the Subtraction Servlet instead
-//        RequestDispatcher rd = request.getRequestDispatcher("subtraction");
-//        rd.forward(request, response);
 
+
+
+
+
+
+
+
+//
     }
 }

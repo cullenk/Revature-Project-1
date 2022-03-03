@@ -13,8 +13,8 @@ public class Application {
         BreedService breedService = new BreedService();
         List<Breed> returnedBreeds = breedService.getBestBreedsForUser("large", "active", "a lot");
 
-        for(Breed b : returnedBreeds){
-            System.out.println(b.breed);
+        for(Breed breeds : returnedBreeds){
+            System.out.println(breeds.breed);
         }
 
 //        Menu mainMenu = new Menu();
