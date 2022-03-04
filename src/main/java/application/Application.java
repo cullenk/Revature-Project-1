@@ -1,7 +1,9 @@
 package application;
 
+import model.AdoptionRecord;
 import model.Breed;
 import model.Menu;
+import services.AdoptionRecordService;
 import services.BreedService;
 
 import java.io.IOException;
@@ -15,18 +17,26 @@ public class Application {
 
         -Add adoption record once finished.
         -Create flows for other CRUD methods
-        -Create navbar to navigate to home
         -Add images?
         -Add exceptions for inputs or convert to radio buttons
+        -Add Time stamp for adoption records?
+        -What to do if there are no records or null is returned
          */
 
 
-        BreedService breedService = new BreedService();
-        List<Breed> returnedBreeds = breedService.getBestBreedsForUser("large", "active", "a lot");
+//        BreedService breedService = new BreedService();
+//        List<Breed> returnedBreeds = breedService.getBestBreedsForUser("large", "active", "a lot");
 
-        for(Breed breeds : returnedBreeds){
-            System.out.println(breeds.breed);
+        AdoptionRecordService recordService = new AdoptionRecordService();
+        List<AdoptionRecord> allAdoptionRecordsList = recordService.getAllAdoptionRecords();
+
+        for(AdoptionRecord adr : allAdoptionRecordsList){
+            System.out.println(adr);
         }
+
+//        for(Breed breeds : returnedBreeds){
+//            System.out.println(breeds.breed);
+//        }
 
 //        Menu mainMenu = new Menu();
 //        mainMenu.createMenu();
