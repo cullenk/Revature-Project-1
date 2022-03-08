@@ -15,7 +15,7 @@ public class HibernateUtil {
     private static SessionFactory sessionFactory;
 
     public static Session getSession() throws IOException {
-        //If not session exists yet, then we'll set one up.
+        //If no session exists yet, then we'll set one up.
         if(sessionFactory == null){
             Configuration configuration = new Configuration();
             Properties props = new Properties();

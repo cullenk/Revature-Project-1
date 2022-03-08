@@ -8,6 +8,8 @@ import lombok.ToString;
 
 import javax.persistence.*;
 import javax.persistence.Id;
+import java.util.ArrayList;
+import java.util.Collection;
 
 // POJO
 @Entity
@@ -34,5 +36,8 @@ public class Breed {
     public String temperament;
     public String size;
     public String sheds;
+    //Multiplicity to show that a certain breed could have many adoption records. Indicates popularity of the breed.
+    @OneToMany
+    private Collection<AdoptionRecord> numberOfAdoptions = new ArrayList<AdoptionRecord>();
 
 }

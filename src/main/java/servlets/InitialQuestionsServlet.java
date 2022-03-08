@@ -26,16 +26,12 @@ public class InitialQuestionsServlet extends HttpServlet {
         String temperament = request.getParameter("temperament");
         String sheds = request.getParameter("sheds");
 
-//        out.println("<h2>" + size + "</h2><br/>");
-//        out.println("<h2>" + temperament + "</h2><br/>");
-//        out.println("<h2>" + sheds + "</h2><br/>");
-
         BreedService breedService = new BreedService();
         List<Breed> returnedBreeds = breedService.getBestBreedsForUser(size, temperament, sheds);
 
         //Set the queried list to a value to pass along
-        request.setAttribute("firstName", firstName);
-        request.setAttribute("lastName", lastName);
+        request.getSession().setAttribute("firstName", firstName);
+        request.getSession().setAttribute("lastName", lastName);
         request.setAttribute("returnedBreeds", returnedBreeds);
 
         //Forward to response data to .jsp file.

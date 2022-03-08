@@ -21,7 +21,11 @@ public class Application {
         -Add exceptions for inputs or convert to radio buttons
         -Add Time stamp for adoption records?
         -What to do if there are no records or null is returned
+        -Add Virtual Machine through Azure?
+        -Add logging and testing
          */
+
+
 
 
 //        BreedService breedService = new BreedService();
@@ -29,6 +33,8 @@ public class Application {
 
         AdoptionRecordService recordService = new AdoptionRecordService();
         List<AdoptionRecord> allAdoptionRecordsList = recordService.getAllAdoptionRecords();
+
+//    recordService.addNewAdoptionRecord("John", "Krasinski", "Pug", "female", "Emily");
 
         for(AdoptionRecord adr : allAdoptionRecordsList){
             System.out.println(adr);

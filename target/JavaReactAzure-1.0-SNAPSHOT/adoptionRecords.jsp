@@ -14,7 +14,7 @@
 
 <div>
     <% for (AdoptionRecord ar : adoptionRecordList){ %>
-    <p><%=ar.firstName%> <%=ar.lastName%>adopted a <%=ar.gender%> <%=ar.breed%> puppy named <%=ar.puppy_name%>.</p>
+    <p><%=ar.firstName%> <%=ar.lastName%> adopted a <%=ar.gender%> <%=ar.breed%> puppy named <%=ar.puppy_name%>.</p>
     <%}%>
 </div>
 

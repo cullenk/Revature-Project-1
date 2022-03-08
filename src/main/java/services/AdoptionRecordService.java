@@ -16,5 +16,10 @@ public class AdoptionRecordService {
         return adr.getAdoptionRecords();
     }
 
+    public boolean addNewAdoptionRecord(String firstName, String lastName, String breed, String gender, String puppy_name){
+        adr.addNewAdoptionRecord(firstName, lastName, breed, gender, puppy_name);
+        return true;
+    }
+
 
 }

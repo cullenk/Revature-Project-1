@@ -1,5 +1,7 @@
 package servlets;
 
+import services.AdoptionRecordService;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -20,6 +22,15 @@ public class adoptionPageServlet extends HttpServlet {
 
         request.setAttribute("gender", gender);
         request.setAttribute("name", name);
+
+        //Get the old session values to save the user first and last name as well as the breed they chose
+        String firstName = (String) request.getSession().getAttribute("firstName");
+        String lastName = (String) request.getSession().getAttribute("lastName");
+        String breed = (String) request.getSession().getAttribute("chosenBreed");
+
+        //Add the new adoption to the adoption records table
+        AdoptionRecordService adr = new AdoptionRecordService();
+        adr.addNewAdoptionRecord(firstName, lastName, breed, gender, name);
 
         //Forward to response data to .jsp file.
         RequestDispatcher rd = request.getRequestDispatcher("adoptionPage.jsp");

@@ -24,17 +24,25 @@ public class AdoptionRecordRepository {
         return null;
     }
 
-//    public boolean addNewAdoptionRecord(String firstName, String lastName, String breed, String gender, String puppy_name){
-//        try {
-//            Session session = HibernateUtil.getSession();
-//            Transaction transaction = session.beginTransaction();
-//
-//            session.persist();
-//            session.close();
-//            return true;
-//        }catch(HibernateException | IOException e) {
-//            e.printStackTrace();
-//        }
-//        return false;
-//    }
+    public boolean addNewAdoptionRecord(String firstName, String lastName, String breed, String gender, String puppy_name){
+        try {
+            Session session = HibernateUtil.getSession();
+            Transaction transaction = session.beginTransaction();
+
+            AdoptionRecord newRecord = new AdoptionRecord();
+            newRecord.setFirstName(firstName);
+            newRecord.setLastName(lastName);
+            newRecord.setBreed(breed);
+            newRecord.setGender(gender);
+            newRecord.setPuppy_name(puppy_name);
+
+            session.persist(newRecord);
+            transaction.commit();
+            session.close();
+            return true;
+        }catch(HibernateException | IOException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
 }
