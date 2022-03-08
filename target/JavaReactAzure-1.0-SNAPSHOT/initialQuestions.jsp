@@ -17,8 +17,8 @@
 </style>
 
 <%
-    String firstName = (String) request.getAttribute("firstName");
-    String lastName = (String) request.getAttribute("lastName");
+    String firstName = (String) request.getSession().getAttribute("firstName");
+    String lastName = (String) request.getSession().getAttribute("lastName");
     List<Breed> breedList = (List<Breed>) request.getAttribute("returnedBreeds");
 %>
 <h1>Hi <%=firstName + " " + lastName%>, here are some breeds that will suit you best. Please select whichever one you would like!</h1>

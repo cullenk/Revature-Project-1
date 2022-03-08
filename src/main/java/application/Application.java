@@ -3,8 +3,10 @@ package application;
 import model.AdoptionRecord;
 import model.Breed;
 import model.Menu;
+import org.hibernate.Session;
 import services.AdoptionRecordService;
 import services.BreedService;
+import util.HibernateUtil;
 
 import java.io.IOException;
 import java.util.List;
@@ -14,9 +16,6 @@ public class Application {
 
 
         /*To Do
-
-        -Add adoption record once finished.
-        -Create flows for other CRUD methods
         -Add images?
         -Add exceptions for inputs or convert to radio buttons
         -Add Time stamp for adoption records?
@@ -25,17 +24,29 @@ public class Application {
         -Add logging and testing
          */
 
-
-
-
-//        BreedService breedService = new BreedService();
+        BreedService breedService = new BreedService();
 //        List<Breed> returnedBreeds = breedService.getBestBreedsForUser("large", "active", "a lot");
 
         AdoptionRecordService recordService = new AdoptionRecordService();
+        recordService.deleteAdoptionRecord(3);
+
+//        recordService.addNewAdoptionRecord("Jennifer", "Lawrence", "French Bulldog", "male", "Peeta");
+
+
+//        Breed breed = new Breed();
+//
+//        breed.getNumberOfAdoptions().add(newRecord);
+//        breed.getNumberOfAdoptions().add(newRecord2);
+
+//        Session session = HibernateUtil.getSession();
+//        session.beginTransaction();
+//        session.save(breed);
+//        session.save(newRecord);
+//        session.save(newRecord2);
+//        session.getTransaction().commit();
+//        session.close();
+
         List<AdoptionRecord> allAdoptionRecordsList = recordService.getAllAdoptionRecords();
-
-//    recordService.addNewAdoptionRecord("John", "Krasinski", "Pug", "female", "Emily");
-
         for(AdoptionRecord adr : allAdoptionRecordsList){
             System.out.println(adr);
         }

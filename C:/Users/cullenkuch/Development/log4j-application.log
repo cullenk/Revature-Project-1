@@ -249,3 +249,252 @@ Caused by: com.microsoft.sqlserver.jdbc.SQLServerException: ALTER TABLE only all
 2022-03-07 14:39:21 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.SQLServerDialect
 2022-03-07 14:39:22 INFO  access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@788ddc1f] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
 2022-03-07 14:39:22 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-08 13:08:15 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.6.5.Final
+2022-03-08 13:08:15 INFO  Environment:184 - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.connection.driver_class=com.microsoft.sqlserver.jdbc.SQLServerDriver, hibernate.hbm2ddl.auto=update, hibernate.dialect=org.hibernate.dialect.SQLServerDialect, hibernate.connection.password=****, hibernate.connection.username=cullenkuch, hibernate.connection.url=jdbc:sqlserver://cullensfirstserver.database.windows.net:1433;database=myDatabase;user=cullenkuch@cullensfirstserver;password={your_password_here};encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;, hibernate.bytecode.use_reflection_optimizer=false, hibernate.show_sql=true}
+2022-03-08 13:08:16 INFO  Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-08 13:08:16 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-03-08 13:08:16 INFO  pooling:115 - HHH10001005: using driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] at URL [jdbc:sqlserver://cullensfirstserver.database.windows.net:1433;database=myDatabase;user=cullenkuch@cullensfirstserver;password={your_password_here};encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;]
+2022-03-08 13:08:16 INFO  pooling:124 - HHH10001001: Connection properties: {password=****, user=cullenkuch}
+2022-03-08 13:08:16 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2022-03-08 13:08:16 INFO  DriverManagerConnectionProviderImpl:274 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2022-03-08 13:08:17 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.SQLServerDialect
+2022-03-08 13:08:18 INFO  access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@4adc663e] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2022-03-08 13:08:19 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-08 13:11:30 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.6.5.Final
+2022-03-08 13:11:30 INFO  Environment:184 - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.connection.driver_class=com.microsoft.sqlserver.jdbc.SQLServerDriver, hibernate.hbm2ddl.auto=update, hibernate.dialect=org.hibernate.dialect.SQLServerDialect, hibernate.connection.password=****, hibernate.connection.username=cullenkuch, hibernate.connection.url=jdbc:sqlserver://cullensfirstserver.database.windows.net:1433;database=myDatabase;user=cullenkuch@cullensfirstserver;password={your_password_here};encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;, hibernate.bytecode.use_reflection_optimizer=false, hibernate.show_sql=true}
+2022-03-08 13:11:31 INFO  Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-08 13:11:32 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-03-08 13:11:32 INFO  pooling:115 - HHH10001005: using driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] at URL [jdbc:sqlserver://cullensfirstserver.database.windows.net:1433;database=myDatabase;user=cullenkuch@cullensfirstserver;password={your_password_here};encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;]
+2022-03-08 13:11:32 INFO  pooling:124 - HHH10001001: Connection properties: {password=****, user=cullenkuch}
+2022-03-08 13:11:32 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2022-03-08 13:11:32 INFO  DriverManagerConnectionProviderImpl:274 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2022-03-08 13:11:33 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.SQLServerDialect
+2022-03-08 13:11:34 INFO  access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@17143b3b] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2022-03-08 13:11:34 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-08 14:08:17 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.6.5.Final
+2022-03-08 14:08:17 INFO  Environment:184 - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.connection.driver_class=com.microsoft.sqlserver.jdbc.SQLServerDriver, hibernate.hbm2ddl.auto=update, hibernate.dialect=org.hibernate.dialect.SQLServerDialect, hibernate.connection.password=****, hibernate.connection.username=cullenkuch, hibernate.connection.url=jdbc:sqlserver://cullensfirstserver.database.windows.net:1433;database=myDatabase;user=cullenkuch@cullensfirstserver;password={your_password_here};encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;, hibernate.bytecode.use_reflection_optimizer=false, hibernate.show_sql=true}
+2022-03-08 14:08:17 INFO  Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-08 14:08:17 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-03-08 14:08:17 INFO  pooling:115 - HHH10001005: using driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] at URL [jdbc:sqlserver://cullensfirstserver.database.windows.net:1433;database=myDatabase;user=cullenkuch@cullensfirstserver;password={your_password_here};encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;]
+2022-03-08 14:08:17 INFO  pooling:124 - HHH10001001: Connection properties: {password=****, user=cullenkuch}
+2022-03-08 14:08:17 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2022-03-08 14:08:17 INFO  DriverManagerConnectionProviderImpl:274 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2022-03-08 14:08:18 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.SQLServerDialect
+2022-03-08 14:08:19 INFO  access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@17143b3b] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2022-03-08 14:08:20 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-08 14:16:03 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.6.5.Final
+2022-03-08 14:16:03 INFO  Environment:184 - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.connection.driver_class=com.microsoft.sqlserver.jdbc.SQLServerDriver, hibernate.hbm2ddl.auto=update, hibernate.dialect=org.hibernate.dialect.SQLServerDialect, hibernate.connection.password=****, hibernate.connection.username=cullenkuch, hibernate.connection.url=jdbc:sqlserver://cullensfirstserver.database.windows.net:1433;database=myDatabase;user=cullenkuch@cullensfirstserver;password={your_password_here};encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;, hibernate.bytecode.use_reflection_optimizer=false, hibernate.show_sql=true}
+2022-03-08 14:16:04 INFO  Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-08 14:16:04 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-03-08 14:16:04 INFO  pooling:115 - HHH10001005: using driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] at URL [jdbc:sqlserver://cullensfirstserver.database.windows.net:1433;database=myDatabase;user=cullenkuch@cullensfirstserver;password={your_password_here};encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;]
+2022-03-08 14:16:04 INFO  pooling:124 - HHH10001001: Connection properties: {password=****, user=cullenkuch}
+2022-03-08 14:16:04 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2022-03-08 14:16:04 INFO  DriverManagerConnectionProviderImpl:274 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2022-03-08 14:16:04 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.SQLServerDialect
+2022-03-08 14:16:05 INFO  access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@17143b3b] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2022-03-08 14:16:06 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-08 14:57:48 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.6.5.Final
+2022-03-08 14:57:48 INFO  Environment:184 - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.connection.driver_class=com.microsoft.sqlserver.jdbc.SQLServerDriver, hibernate.hbm2ddl.auto=update, hibernate.dialect=org.hibernate.dialect.SQLServerDialect, hibernate.connection.password=****, hibernate.connection.username=cullenkuch, hibernate.connection.url=jdbc:sqlserver://cullensfirstserver.database.windows.net:1433;database=myDatabase;user=cullenkuch@cullensfirstserver;password={your_password_here};encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;, hibernate.bytecode.use_reflection_optimizer=false, hibernate.show_sql=true}
+2022-03-08 14:57:48 INFO  Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-08 14:57:48 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-03-08 14:57:49 INFO  pooling:115 - HHH10001005: using driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] at URL [jdbc:sqlserver://cullensfirstserver.database.windows.net:1433;database=myDatabase;user=cullenkuch@cullensfirstserver;password={your_password_here};encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;]
+2022-03-08 14:57:49 INFO  pooling:124 - HHH10001001: Connection properties: {password=****, user=cullenkuch}
+2022-03-08 14:57:49 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2022-03-08 14:57:49 INFO  DriverManagerConnectionProviderImpl:274 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2022-03-08 14:57:49 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.SQLServerDialect
+2022-03-08 14:57:50 INFO  access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@17143b3b] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2022-03-08 14:57:51 WARN  ExceptionHandlerLoggedImpl:27 - GenerationTarget encountered exception accepting command : Error executing DDL "alter table adoption_history add adoption_id int not null" via JDBC Statement
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table adoption_history add adoption_id int not null" via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlString(AbstractSchemaMigrator.java:581)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlStrings(AbstractSchemaMigrator.java:602)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.migrateTable(AbstractSchemaMigrator.java:314)
+	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:78)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:220)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:123)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:192)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:81)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:335)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:728)
+	at util.HibernateUtil.getSession(HibernateUtil.java:35)
+	at respositories.AdoptionRecordRepository.addNewAdoptionRecord(AdoptionRecordRepository.java:29)
+	at services.AdoptionRecordService.addNewAdoptionRecord(AdoptionRecordService.java:20)
+	at application.Application.main(Application.java:36)
+Caused by: com.microsoft.sqlserver.jdbc.SQLServerException: ALTER TABLE only allows columns to be added that can contain nulls, or have a DEFAULT definition specified, or the column being added is an identity or timestamp column, or alternatively if none of the previous conditions are satisfied the table must be empty to allow addition of this column. Column 'adoption_id' cannot be added to non-empty table 'adoption_history' because it does not satisfy these conditions.
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDatabaseError(SQLServerException.java:265)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.getNextResult(SQLServerStatement.java:1676)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.doExecuteStatement(SQLServerStatement.java:907)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement$StmtExecCmd.doExecute(SQLServerStatement.java:802)
+	at com.microsoft.sqlserver.jdbc.TDSCommand.execute(IOBuffer.java:7785)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.executeCommand(SQLServerConnection.java:3793)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.executeCommand(SQLServerStatement.java:268)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.executeStatement(SQLServerStatement.java:242)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.execute(SQLServerStatement.java:775)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54)
+	... 15 more
+2022-03-08 14:57:51 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-08 16:04:17 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.6.5.Final
+2022-03-08 16:04:17 INFO  Environment:184 - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.connection.driver_class=com.microsoft.sqlserver.jdbc.SQLServerDriver, hibernate.hbm2ddl.auto=update, hibernate.dialect=org.hibernate.dialect.SQLServerDialect, hibernate.connection.password=****, hibernate.connection.username=cullenkuch, hibernate.connection.url=jdbc:sqlserver://cullensfirstserver.database.windows.net:1433;database=myDatabase;user=cullenkuch@cullensfirstserver;password={your_password_here};encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;, hibernate.bytecode.use_reflection_optimizer=false, hibernate.show_sql=true}
+2022-03-08 16:04:18 INFO  Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-08 16:04:18 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-03-08 16:04:18 INFO  pooling:115 - HHH10001005: using driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] at URL [jdbc:sqlserver://cullensfirstserver.database.windows.net:1433;database=myDatabase;user=cullenkuch@cullensfirstserver;password={your_password_here};encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;]
+2022-03-08 16:04:18 INFO  pooling:124 - HHH10001001: Connection properties: {password=****, user=cullenkuch}
+2022-03-08 16:04:18 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2022-03-08 16:04:18 INFO  DriverManagerConnectionProviderImpl:274 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2022-03-08 16:04:19 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.SQLServerDialect
+2022-03-08 16:04:20 INFO  access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2bc378f7] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2022-03-08 16:04:20 WARN  ExceptionHandlerLoggedImpl:27 - GenerationTarget encountered exception accepting command : Error executing DDL "alter table adoption_history add adoption_id int not null" via JDBC Statement
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table adoption_history add adoption_id int not null" via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlString(AbstractSchemaMigrator.java:581)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlStrings(AbstractSchemaMigrator.java:602)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.migrateTable(AbstractSchemaMigrator.java:314)
+	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:78)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:220)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:123)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:192)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:81)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:335)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:728)
+	at util.HibernateUtil.getSession(HibernateUtil.java:35)
+	at respositories.AdoptionRecordRepository.getAdoptionRecords(AdoptionRecordRepository.java:16)
+	at services.AdoptionRecordService.getAllAdoptionRecords(AdoptionRecordService.java:16)
+	at application.Application.main(Application.java:34)
+Caused by: com.microsoft.sqlserver.jdbc.SQLServerException: ALTER TABLE only allows columns to be added that can contain nulls, or have a DEFAULT definition specified, or the column being added is an identity or timestamp column, or alternatively if none of the previous conditions are satisfied the table must be empty to allow addition of this column. Column 'adoption_id' cannot be added to non-empty table 'adoption_history' because it does not satisfy these conditions.
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDatabaseError(SQLServerException.java:265)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.getNextResult(SQLServerStatement.java:1676)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.doExecuteStatement(SQLServerStatement.java:907)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement$StmtExecCmd.doExecute(SQLServerStatement.java:802)
+	at com.microsoft.sqlserver.jdbc.TDSCommand.execute(IOBuffer.java:7785)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.executeCommand(SQLServerConnection.java:3793)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.executeCommand(SQLServerStatement.java:268)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.executeStatement(SQLServerStatement.java:242)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.execute(SQLServerStatement.java:775)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54)
+	... 15 more
+2022-03-08 16:04:20 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-08 16:04:21 WARN  SqlExceptionHelper:137 - SQL Error: 207, SQLState: S0001
+2022-03-08 16:04:21 ERROR SqlExceptionHelper:142 - Invalid column name 'adoption_id'.
+2022-03-08 16:11:29 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.6.5.Final
+2022-03-08 16:11:29 INFO  Environment:184 - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.connection.driver_class=com.microsoft.sqlserver.jdbc.SQLServerDriver, hibernate.hbm2ddl.auto=update, hibernate.dialect=org.hibernate.dialect.SQLServerDialect, hibernate.connection.password=****, hibernate.connection.username=cullenkuch, hibernate.connection.url=jdbc:sqlserver://cullensfirstserver.database.windows.net:1433;database=myDatabase;user=cullenkuch@cullensfirstserver;password={your_password_here};encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;, hibernate.bytecode.use_reflection_optimizer=false, hibernate.show_sql=true}
+2022-03-08 16:11:30 INFO  Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-08 16:11:30 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-03-08 16:11:30 INFO  pooling:115 - HHH10001005: using driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] at URL [jdbc:sqlserver://cullensfirstserver.database.windows.net:1433;database=myDatabase;user=cullenkuch@cullensfirstserver;password={your_password_here};encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;]
+2022-03-08 16:11:30 INFO  pooling:124 - HHH10001001: Connection properties: {password=****, user=cullenkuch}
+2022-03-08 16:11:30 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2022-03-08 16:11:30 INFO  DriverManagerConnectionProviderImpl:274 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2022-03-08 16:11:31 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.SQLServerDialect
+2022-03-08 16:11:32 INFO  access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2bc378f7] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2022-03-08 16:11:32 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-08 16:12:34 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.6.5.Final
+2022-03-08 16:12:34 INFO  Environment:184 - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.connection.driver_class=com.microsoft.sqlserver.jdbc.SQLServerDriver, hibernate.hbm2ddl.auto=update, hibernate.dialect=org.hibernate.dialect.SQLServerDialect, hibernate.connection.password=****, hibernate.connection.username=cullenkuch, hibernate.connection.url=jdbc:sqlserver://cullensfirstserver.database.windows.net:1433;database=myDatabase;user=cullenkuch@cullensfirstserver;password={your_password_here};encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;, hibernate.bytecode.use_reflection_optimizer=false, hibernate.show_sql=true}
+2022-03-08 16:12:35 INFO  Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-08 16:12:35 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-03-08 16:12:35 INFO  pooling:115 - HHH10001005: using driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] at URL [jdbc:sqlserver://cullensfirstserver.database.windows.net:1433;database=myDatabase;user=cullenkuch@cullensfirstserver;password={your_password_here};encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;]
+2022-03-08 16:12:35 INFO  pooling:124 - HHH10001001: Connection properties: {password=****, user=cullenkuch}
+2022-03-08 16:12:35 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2022-03-08 16:12:35 INFO  DriverManagerConnectionProviderImpl:274 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2022-03-08 16:12:36 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.SQLServerDialect
+2022-03-08 16:12:36 INFO  access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@268cbb86] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2022-03-08 16:12:37 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-08 16:35:42 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.6.5.Final
+2022-03-08 16:35:42 INFO  Environment:184 - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.connection.driver_class=com.microsoft.sqlserver.jdbc.SQLServerDriver, hibernate.hbm2ddl.auto=update, hibernate.dialect=org.hibernate.dialect.SQLServerDialect, hibernate.connection.password=****, hibernate.connection.username=cullenkuch, hibernate.connection.url=jdbc:sqlserver://cullensfirstserver.database.windows.net:1433;database=myDatabase;user=cullenkuch@cullensfirstserver;password={your_password_here};encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;, hibernate.bytecode.use_reflection_optimizer=false, hibernate.show_sql=true}
+2022-03-08 16:35:42 INFO  Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-08 16:35:42 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-03-08 16:35:42 INFO  pooling:115 - HHH10001005: using driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] at URL [jdbc:sqlserver://cullensfirstserver.database.windows.net:1433;database=myDatabase;user=cullenkuch@cullensfirstserver;password={your_password_here};encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;]
+2022-03-08 16:35:42 INFO  pooling:124 - HHH10001001: Connection properties: {password=****, user=cullenkuch}
+2022-03-08 16:35:42 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2022-03-08 16:35:42 INFO  DriverManagerConnectionProviderImpl:274 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2022-03-08 16:35:43 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.SQLServerDialect
+2022-03-08 16:35:44 INFO  access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@268cbb86] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2022-03-08 16:35:44 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-08 16:36:27 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.6.5.Final
+2022-03-08 16:36:27 INFO  Environment:184 - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.connection.driver_class=com.microsoft.sqlserver.jdbc.SQLServerDriver, hibernate.hbm2ddl.auto=update, hibernate.dialect=org.hibernate.dialect.SQLServerDialect, hibernate.connection.password=****, hibernate.connection.username=cullenkuch, hibernate.connection.url=jdbc:sqlserver://cullensfirstserver.database.windows.net:1433;database=myDatabase;user=cullenkuch@cullensfirstserver;password={your_password_here};encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;, hibernate.bytecode.use_reflection_optimizer=false, hibernate.show_sql=true}
+2022-03-08 16:36:27 INFO  Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-08 16:36:27 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-03-08 16:36:27 INFO  pooling:115 - HHH10001005: using driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] at URL [jdbc:sqlserver://cullensfirstserver.database.windows.net:1433;database=myDatabase;user=cullenkuch@cullensfirstserver;password={your_password_here};encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;]
+2022-03-08 16:36:27 INFO  pooling:124 - HHH10001001: Connection properties: {password=****, user=cullenkuch}
+2022-03-08 16:36:27 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2022-03-08 16:36:27 INFO  DriverManagerConnectionProviderImpl:274 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2022-03-08 16:36:28 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.SQLServerDialect
+2022-03-08 16:36:29 INFO  access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@268cbb86] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2022-03-08 16:36:29 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-08 16:39:36 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.6.5.Final
+2022-03-08 16:39:36 INFO  Environment:184 - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.connection.driver_class=com.microsoft.sqlserver.jdbc.SQLServerDriver, hibernate.hbm2ddl.auto=update, hibernate.dialect=org.hibernate.dialect.SQLServerDialect, hibernate.connection.password=****, hibernate.connection.username=cullenkuch, hibernate.connection.url=jdbc:sqlserver://cullensfirstserver.database.windows.net:1433;database=myDatabase;user=cullenkuch@cullensfirstserver;password={your_password_here};encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;, hibernate.bytecode.use_reflection_optimizer=false, hibernate.show_sql=true}
+2022-03-08 16:39:36 INFO  Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-08 16:39:36 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-03-08 16:39:36 INFO  pooling:115 - HHH10001005: using driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] at URL [jdbc:sqlserver://cullensfirstserver.database.windows.net:1433;database=myDatabase;user=cullenkuch@cullensfirstserver;password={your_password_here};encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;]
+2022-03-08 16:39:36 INFO  pooling:124 - HHH10001001: Connection properties: {password=****, user=cullenkuch}
+2022-03-08 16:39:36 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2022-03-08 16:39:36 INFO  DriverManagerConnectionProviderImpl:274 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2022-03-08 16:39:37 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.SQLServerDialect
+2022-03-08 16:39:37 INFO  access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@268cbb86] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2022-03-08 16:39:38 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-08 16:59:24 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.6.5.Final
+2022-03-08 16:59:24 INFO  Environment:184 - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.connection.driver_class=com.microsoft.sqlserver.jdbc.SQLServerDriver, hibernate.hbm2ddl.auto=update, hibernate.dialect=org.hibernate.dialect.SQLServerDialect, hibernate.connection.password=****, hibernate.connection.username=cullenkuch, hibernate.connection.url=jdbc:sqlserver://cullensfirstserver.database.windows.net:1433;database=myDatabase;user=cullenkuch@cullensfirstserver;password={your_password_here};encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;, hibernate.bytecode.use_reflection_optimizer=false, hibernate.show_sql=true}
+2022-03-08 16:59:24 INFO  Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-08 16:59:24 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-03-08 16:59:24 INFO  pooling:115 - HHH10001005: using driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] at URL [jdbc:sqlserver://cullensfirstserver.database.windows.net:1433;database=myDatabase;user=cullenkuch@cullensfirstserver;password={your_password_here};encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;]
+2022-03-08 16:59:24 INFO  pooling:124 - HHH10001001: Connection properties: {password=****, user=cullenkuch}
+2022-03-08 16:59:24 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2022-03-08 16:59:24 INFO  DriverManagerConnectionProviderImpl:274 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2022-03-08 16:59:25 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.SQLServerDialect
+2022-03-08 16:59:26 INFO  access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2bc378f7] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2022-03-08 16:59:27 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-08 17:00:31 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.6.5.Final
+2022-03-08 17:00:31 INFO  Environment:184 - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.connection.driver_class=com.microsoft.sqlserver.jdbc.SQLServerDriver, hibernate.hbm2ddl.auto=update, hibernate.dialect=org.hibernate.dialect.SQLServerDialect, hibernate.connection.password=****, hibernate.connection.username=cullenkuch, hibernate.connection.url=jdbc:sqlserver://cullensfirstserver.database.windows.net:1433;database=myDatabase;user=cullenkuch@cullensfirstserver;password={your_password_here};encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;, hibernate.bytecode.use_reflection_optimizer=false, hibernate.show_sql=true}
+2022-03-08 17:00:31 INFO  Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-08 17:00:31 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-03-08 17:00:32 INFO  pooling:115 - HHH10001005: using driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] at URL [jdbc:sqlserver://cullensfirstserver.database.windows.net:1433;database=myDatabase;user=cullenkuch@cullensfirstserver;password={your_password_here};encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;]
+2022-03-08 17:00:32 INFO  pooling:124 - HHH10001001: Connection properties: {password=****, user=cullenkuch}
+2022-03-08 17:00:32 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2022-03-08 17:00:32 INFO  DriverManagerConnectionProviderImpl:274 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2022-03-08 17:00:32 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.SQLServerDialect
+2022-03-08 17:00:33 INFO  access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@268cbb86] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2022-03-08 17:00:33 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-08 17:05:29 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.6.5.Final
+2022-03-08 17:05:29 INFO  Environment:184 - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.connection.driver_class=com.microsoft.sqlserver.jdbc.SQLServerDriver, hibernate.hbm2ddl.auto=update, hibernate.dialect=org.hibernate.dialect.SQLServerDialect, hibernate.connection.password=****, hibernate.connection.username=cullenkuch, hibernate.connection.url=jdbc:sqlserver://cullensfirstserver.database.windows.net:1433;database=myDatabase;user=cullenkuch@cullensfirstserver;password={your_password_here};encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;, hibernate.bytecode.use_reflection_optimizer=false, hibernate.show_sql=true}
+2022-03-08 17:05:30 INFO  Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-08 17:05:30 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-03-08 17:05:30 INFO  pooling:115 - HHH10001005: using driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] at URL [jdbc:sqlserver://cullensfirstserver.database.windows.net:1433;database=myDatabase;user=cullenkuch@cullensfirstserver;password={your_password_here};encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;]
+2022-03-08 17:05:30 INFO  pooling:124 - HHH10001001: Connection properties: {password=****, user=cullenkuch}
+2022-03-08 17:05:30 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2022-03-08 17:05:30 INFO  DriverManagerConnectionProviderImpl:274 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2022-03-08 17:05:31 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.SQLServerDialect
+2022-03-08 17:05:32 INFO  access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2bc378f7] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2022-03-08 17:05:32 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-08 17:06:30 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.6.5.Final
+2022-03-08 17:06:30 INFO  Environment:184 - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.connection.driver_class=com.microsoft.sqlserver.jdbc.SQLServerDriver, hibernate.hbm2ddl.auto=update, hibernate.dialect=org.hibernate.dialect.SQLServerDialect, hibernate.connection.password=****, hibernate.connection.username=cullenkuch, hibernate.connection.url=jdbc:sqlserver://cullensfirstserver.database.windows.net:1433;database=myDatabase;user=cullenkuch@cullensfirstserver;password={your_password_here};encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;, hibernate.bytecode.use_reflection_optimizer=false, hibernate.show_sql=true}
+2022-03-08 17:06:31 INFO  Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-08 17:06:31 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-03-08 17:06:31 INFO  pooling:115 - HHH10001005: using driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] at URL [jdbc:sqlserver://cullensfirstserver.database.windows.net:1433;database=myDatabase;user=cullenkuch@cullensfirstserver;password={your_password_here};encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;]
+2022-03-08 17:06:31 INFO  pooling:124 - HHH10001001: Connection properties: {password=****, user=cullenkuch}
+2022-03-08 17:06:31 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2022-03-08 17:06:31 INFO  DriverManagerConnectionProviderImpl:274 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2022-03-08 17:06:32 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.SQLServerDialect
+2022-03-08 17:06:33 INFO  access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2bc378f7] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2022-03-08 17:06:33 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-08 17:08:22 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.6.5.Final
+2022-03-08 17:08:22 INFO  Environment:184 - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.connection.driver_class=com.microsoft.sqlserver.jdbc.SQLServerDriver, hibernate.hbm2ddl.auto=update, hibernate.dialect=org.hibernate.dialect.SQLServerDialect, hibernate.connection.password=****, hibernate.connection.username=cullenkuch, hibernate.connection.url=jdbc:sqlserver://cullensfirstserver.database.windows.net:1433;database=myDatabase;user=cullenkuch@cullensfirstserver;password={your_password_here};encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;, hibernate.bytecode.use_reflection_optimizer=false, hibernate.show_sql=true}
+2022-03-08 17:08:22 INFO  Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-08 17:08:22 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-03-08 17:08:22 INFO  pooling:115 - HHH10001005: using driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] at URL [jdbc:sqlserver://cullensfirstserver.database.windows.net:1433;database=myDatabase;user=cullenkuch@cullensfirstserver;password={your_password_here};encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;]
+2022-03-08 17:08:22 INFO  pooling:124 - HHH10001001: Connection properties: {password=****, user=cullenkuch}
+2022-03-08 17:08:22 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2022-03-08 17:08:22 INFO  DriverManagerConnectionProviderImpl:274 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2022-03-08 17:08:23 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.SQLServerDialect
+2022-03-08 17:08:23 INFO  access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@268cbb86] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2022-03-08 17:08:24 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-08 17:09:17 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.6.5.Final
+2022-03-08 17:09:17 INFO  Environment:184 - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.connection.driver_class=com.microsoft.sqlserver.jdbc.SQLServerDriver, hibernate.hbm2ddl.auto=update, hibernate.dialect=org.hibernate.dialect.SQLServerDialect, hibernate.connection.password=****, hibernate.connection.username=cullenkuch, hibernate.connection.url=jdbc:sqlserver://cullensfirstserver.database.windows.net:1433;database=myDatabase;user=cullenkuch@cullensfirstserver;password={your_password_here};encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;, hibernate.bytecode.use_reflection_optimizer=false, hibernate.show_sql=true}
+2022-03-08 17:09:18 INFO  Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-08 17:09:18 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-03-08 17:09:18 INFO  pooling:115 - HHH10001005: using driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] at URL [jdbc:sqlserver://cullensfirstserver.database.windows.net:1433;database=myDatabase;user=cullenkuch@cullensfirstserver;password={your_password_here};encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;]
+2022-03-08 17:09:18 INFO  pooling:124 - HHH10001001: Connection properties: {password=****, user=cullenkuch}
+2022-03-08 17:09:18 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2022-03-08 17:09:18 INFO  DriverManagerConnectionProviderImpl:274 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2022-03-08 17:09:19 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.SQLServerDialect
+2022-03-08 17:09:20 INFO  access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2bc378f7] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2022-03-08 17:09:20 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]

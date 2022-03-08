@@ -59,7 +59,7 @@
                 Do you want a puppy that will grow to be small, medium or large in size? <input type="text" name="size"><br>
                 Would you like your puppy to be more mellow or active in nature? <input type="text" name="temperament"><br>
                 Would you prefer if your puppy shed a lot or a little? <input type="text" name="sheds"><br>
-                <input type="submit" value="submit">
+                <input type="submit" value="Submit">
             </form>
         </div>
         <div class="form-container">
@@ -71,23 +71,28 @@
         <div class="form-container">
             <h2>View Popular Breeds</h2>
             <form action="initialQuestions" method="post">
-                What's your first name? <input type="text" name="firstName"><br>
-                What's your last name? <input type="text" name="lastName"><br>
-                Do you want a puppy that will grow to be small, medium or large in size? <input type="text" name="size"><br>
-                Would you like your puppy to be more mellow or active in nature? <input type="text" name="temperament"><br>
-                Would you prefer if your puppy shed a lot or a little? <input type="text" name="sheds"><br>
-                <input type="submit" value="submit">
+
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+        <div class="form-container">
+            <h2>Update An Adoption Record</h2>
+            <form action="updateRecordServlet" method="post">
+                What's the ID of the record you'd like to update? <input type="text" name="recordId"><br>
+                <h3>Please fill in the corresponding fields with the information you'd like:</h3><br/>
+                First Name: <input type="text" name="firstName"><br>
+                Last Name: <input type="text" name="lastName"><br>
+                Breed: <input type="text" name="breed"><br>
+                Puppy Gender: <input type="text" name="gender"><br>
+                Puppy Name: <input type="text" name="puppy_name"><br>
+            <input type="submit" value="Update Record">
             </form>
         </div>
         <div class="form-container">
             <h2>Delete An Adoption Record</h2>
-            <form action="initialQuestions" method="post">
-                What's your first name? <input type="text" name="firstName"><br>
-                What's your last name? <input type="text" name="lastName"><br>
-                Do you want a puppy that will grow to be small, medium or large in size? <input type="text" name="size"><br>
-                Would you like your puppy to be more mellow or active in nature? <input type="text" name="temperament"><br>
-                Would you prefer if your puppy shed a lot or a little? <input type="text" name="sheds"><br>
-                <input type="submit" value="submit">
+            <form action="deleteRecordServlet" method="post">
+                What's the ID of the record you'd like to delete? <input type="text" name="recordId"><br>
+                <input type="submit" value="Delete Record">
             </form>
         </div>
     </div>

@@ -20,9 +20,6 @@ public class nameAndGenderServlet extends HttpServlet {
 
         request.getSession().setAttribute("chosenBreed", chosenBreed);
 
-        //Set the queried list to a value to pass along
-        request.setAttribute("chosenBreed", chosenBreed);
-
         //Forward to response data to .jsp file.
         RequestDispatcher rd = request.getRequestDispatcher("nameAndGender.jsp");
         rd.forward(request, response);

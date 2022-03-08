@@ -38,6 +38,9 @@ public class Breed {
     public String sheds;
     //Multiplicity to show that a certain breed could have many adoption records. Indicates popularity of the breed.
     @OneToMany
-    private Collection<AdoptionRecord> numberOfAdoptions = new ArrayList<AdoptionRecord>();
+    @JoinColumn(name="breed_id")
+    private Collection<AdoptionRecord> adoptionRecords = new ArrayList<>();
+
+
 
 }

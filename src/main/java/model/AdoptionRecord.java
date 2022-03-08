@@ -8,6 +8,8 @@ import lombok.ToString;
 
 import javax.persistence.*;
 import javax.persistence.Id;
+import java.util.ArrayList;
+import java.util.Collection;
 
 // POJO
 @Entity
@@ -35,6 +37,13 @@ public class AdoptionRecord {
     public String breed;
     public String gender;
     public String puppy_name;
+    @ManyToOne
+    @JoinColumn(name="breed_id")
+    private Breed breedObject;
+
+    //The column breed_id can take in a Breed object inside the cell. I need to get the breed
+    // the user chose and get the ID of that breed to populate this cell.
 
 
-}
+    }
+

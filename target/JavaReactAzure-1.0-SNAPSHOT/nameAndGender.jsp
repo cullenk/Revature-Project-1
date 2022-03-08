@@ -14,7 +14,7 @@
   }
 </style>
 
-<%String chosenBreed = (String) request.getAttribute("chosenBreed");%>
+<%String chosenBreed = (String) request.getSession().getAttribute("chosenBreed");%>
 <h2>You've chosen a:</h2><br/>
 <h1><%=chosenBreed%></h1>
 

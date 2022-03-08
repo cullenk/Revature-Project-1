@@ -25,6 +25,8 @@ public class AdoptionRecordsServlet extends HttpServlet {
         AdoptionRecordService adoptionService = new AdoptionRecordService();
         List<AdoptionRecord> adoptionRecordList = adoptionService.getAllAdoptionRecords();
 
+        out.println("after query");
+
         request.setAttribute("adoptionRecordList", adoptionRecordList);
 
 

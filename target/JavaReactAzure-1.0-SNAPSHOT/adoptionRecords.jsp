@@ -8,13 +8,20 @@
 </head>
 <body>
 
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+    }
+</style>
+
 <%
     List<AdoptionRecord> adoptionRecordList = (List<AdoptionRecord>) request.getAttribute("adoptionRecordList");
 %>
 
 <div>
     <% for (AdoptionRecord ar : adoptionRecordList){ %>
-    <p><%=ar.firstName%> <%=ar.lastName%> adopted a <%=ar.gender%> <%=ar.breed%> puppy named <%=ar.puppy_name%>.</p>
+    <p>Adoption Record Id <%=ar.adoption_id%> : <%=ar.firstName%> <%=ar.lastName%> adopted a <%=ar.gender%> <%=ar.breed%> puppy named <%=ar.puppy_name%>.</p>
     <%}%>
 </div>
 
