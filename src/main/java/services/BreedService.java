@@ -12,20 +12,13 @@ public class BreedService {
         br = new BreedRepository();
     }
 
-    public Breed getBreedById(int id){
-        return br.getBreedById(id);
-    }
-
     public List<Breed> getAllBreeds(){
         return br.getAllBreeds();
     }
 
-    public boolean addBreed(Breed b){
-        if(br.getBreedById(b.getBreed_id()) == null){
-            return br.addBreed(b);
-        }else{
-            return false;
-        }
+
+    public List<Breed> getBreedDetails(String breed) throws IOException {
+        return br.getBreedDetails(breed);
     }
 
     public List<Breed> getBestBreedsForUser(String size, String temperament, String sheds) throws IOException {

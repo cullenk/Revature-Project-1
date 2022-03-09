@@ -36,6 +36,7 @@ public class Breed {
     public String temperament;
     public String size;
     public String sheds;
+    public String image_url;
     //Multiplicity to show that a certain breed could have many adoption records. Indicates popularity of the breed.
     @OneToMany
     @JoinColumn(name="breed_id")
