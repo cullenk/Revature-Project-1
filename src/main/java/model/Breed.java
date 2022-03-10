@@ -33,7 +33,7 @@ public class Breed {
     public String size;
     public String sheds;
     public String image_url;
-    @OneToMany(mappedBy = "breedObject")
+    @OneToMany(cascade = CascadeType.MERGE, mappedBy = "breedObject", fetch = FetchType.EAGER)
     private Collection<AdoptionRecord> adoptionRecords = new ArrayList<>();
 
 

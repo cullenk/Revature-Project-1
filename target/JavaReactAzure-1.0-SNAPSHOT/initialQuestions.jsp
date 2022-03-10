@@ -5,14 +5,21 @@
 <%@ include file="header.jsp" %>
 <html>
 <head>
-    <title>JSP Page</title>
+    <title>Puppy Adoption App</title>
 </head>
-<body style="background-color: aqua">
+<body>
 
 <style>
-    body{
+    body {
+        font-family: Arial;
+        line-height: 1.4;
+        background-image: linear-gradient(to bottom right, dodgerblue, darkblue);
         margin: 0;
         padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .container {
@@ -21,6 +28,7 @@
     }
     h1 {
         text-align: center;
+        color: white;
     }
     form {
         display: flex;
@@ -30,14 +38,14 @@
         align-items: center;
     }
 
-
     .all-breeds-div {
         display: grid;
         grid-template-columns: auto auto;
     }
 
     .breed-option-div {
-        background: bisque;
+        background: white;
+        border-radius: 5px;
         height: 300px;
         width: 400px;
         padding: 20px;
@@ -46,6 +54,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     }
 
     .breed-image-div{
@@ -63,20 +72,31 @@
         margin: 15px;
     }
     .button {
-        padding: 20px 40px;
-        font-size: 20px;
-        outline: none;
-        background: darkslategrey;
+        padding: 10px 20px;
+        opacity: 80%;
+        font-size: 16px;
+        background-image: linear-gradient(to bottom right, dodgerblue, darkblue);
         color: white;
         cursor: pointer;
         border-radius: 5px;
+        transition: .5s ease;
+        max-width: 220px;
+        margin: 20px 0;
+        outline: none;
+        border: 1px solid dodgerblue;
     }
 
     .button:hover {
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        opacity: 100%;
     }
+
+    input:hover {
+        cursor: pointer;
+    }
+
     label {
         margin-left: 10px;
+        font-family: "Arial Rounded MT Bold";
     }
 </style>
 

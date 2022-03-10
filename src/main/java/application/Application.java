@@ -16,19 +16,18 @@ public class Application {
         log.info("Hello Logger!");
 
         /*To Do
-        -Make it pretty :)
         -Multiplicity
-        -Exception handling?
-        -Add testing
+        -Exception handling for typos or no results found.
+        -Finish testing/mockito
          */
-
-        BreedService breedService = new BreedService();
-//        List<Breed> returnedBreeds = breedService.getBestBreedsForUser("large", "active", "a lot");
-
         AdoptionRecordService recordService = new AdoptionRecordService();
+        BreedService breedService = new BreedService();
+        List<Breed> returnedBreeds = breedService.getBestBreedsForUser("large", "active", "a lot");
 
-recordService.getAdoptionRecordByLastName("Kuch");
-//        recordService.addNewAdoptionRecord("John", "Doe", "Beagle", "female", "Kenny");
+
+
+//        recordService.getAdoptionRecordByLastName("Kuch");
+//        recordService.addNewAdoptionRecord("Jane", "Doe", "Poodle", "female", "Daisy");
 
 
 //        Breed breed = new Breed();
@@ -49,9 +48,9 @@ recordService.getAdoptionRecordByLastName("Kuch");
 //            System.out.println(b.breed);
 //        }
 
-//        for(Breed breeds : returnedBreeds){
-//            System.out.println(breeds.breed);
-//        }
+        for(Breed breeds : returnedBreeds){
+            System.out.println(breeds.breed);
+        }
 
 //        Menu mainMenu = new Menu();
 //        mainMenu.createMenu();

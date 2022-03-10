@@ -2,17 +2,67 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Puppy Adoption App</title>
 </head>
 <body>
     <style>
         body {
+            font-family: Arial;
+            background-image: linear-gradient(to bottom right, dodgerblue, darkblue);
             margin: 0;
             padding: 0;
-        display: flex;
+            display: flex;
             flex-direction: column;
-        justify-content: center;
-        align-items: center;
+            justify-content: center;
+            align-items: center;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .hero-div {
+            position: relative;
+            width: 100%;
+            height: 60vh;
+            background-image: url("https://wallpapercave.com/wp/wp7002699.jpg");
+            background-size: cover;
+            background-position: center;
+            z-index: 0;
+        }
+
+        .hero-overlay{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-image: linear-gradient(to right, rgba(2,0,0,1), transparent);
+            z-index: -1;
+        }
+
+        .hero-content-div{
+            margin-top: 80px;
+            height: 100%;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: left;
+            align-items: flex-start;
+            padding: 50px;
+            z-index: 5;
+        }
+
+        h1 {
+            font-family: "Arial Rounded MT Bold";
+            color: dodgerblue;
+            margin-bottom: 5px;
+            font-size: 42px;
+        }
+
+        .hero-paragraph {
+            color: white;
+            margin-bottom: 20px;
+            max-width: 500px;
+            font-size: 24px;
         }
 
         a {
@@ -22,83 +72,131 @@
 
         h2 {
             margin: 10px 0;
+            font-size: 28px;
+        }
+
+        p {
+            margin-bottom: 5px;
+            line-height: 1.4;
         }
 
         .form-container {
-            background: skyblue;
-            padding: 20px;
+            background: white;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            padding: 20px 40px;
             margin: 20px;
+            transition: .5s ease;
+            border-radius: 5px;
+        }
+
+        .form-container:hover{
+            box-shadow: rgba(100, 100, 111, 0.6) 0px 7px 29px 0px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input {
+            margin: 10px 0px;
+        }
+        .button {
+            padding: 10px 20px;
+            opacity: 80%;
+            font-size: 16px;
+            background-image: linear-gradient(to bottom right, dodgerblue, darkblue);
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: .5s ease;
+            max-width: 220px;
+            margin: 20px 0;
+            outline: none;
+            border: 1px solid dodgerblue;
+        }
+
+
+        .button:hover {
+            opacity: 100%;
         }
 
         .forms-main-container{
-
+            margin: 20px 0;
         }
 
-         .header-div {
-             width: 100%;
-             padding: 25px;
-             display: flex;
-             flex-direction: column;
-             align-items: center;
-             justify-content: center;
-             background-color: black;
-             color: white;
-         }
+
     </style>
-    <div class="header-div">
-        <p>Puppy Adoption App</p>
-        <a href="index.html">Home</a>
+
+    <div class="hero-div">
+        <div class="hero-overlay"></div>
+        <div class="hero-content-div">
+            <h1>Cullen's Puppy Adoption App</h1>
+            <p class="hero-paragraph">The Java-based, servlet-comprised and Tomcat-hosted site for all of your puppy needs.</p>
+            <a class="button" href="#forms">Get Started</a>
+        </div>
     </div>
 
-    <div class="forms-main-container">
+    <div id="forms" class="forms-main-container">
         <div class="form-container">
             <h2>Find and Adopt a Puppy For You!</h2>
             <form action="initialQuestions" method="post">
-                What's your first name? <input type="text" name="firstName"><br>
-                What's your last name? <input type="text" name="lastName"><br>
-                Do you want a puppy that will grow to be small, medium or large in size? <input type="text" name="size"><br>
-                Would you like your puppy to be more mellow or active in nature? <input type="text" name="temperament"><br>
-                Would you prefer if your puppy shed a lot or a little? <input type="text" name="sheds"><br>
-                <input type="submit" value="Submit">
+                <p>What's your first name?</p>
+                <input type="text" name="firstName">
+                <p>What's your last name?</p>
+                <input type="text" name="lastName">
+                <p>Do you want a puppy that will grow to be small, medium or large in size?</p>
+                <input type="text" name="size">
+                <p>Would you like your puppy to be more mellow or active in nature?</p>
+                <input type="text" name="temperament">
+                <p>Would you prefer if your puppy shed a lot or a little?</p>
+                <input type="text" name="sheds">
+                <input class="button" type="submit" value="Submit">
             </form>
         </div>
         <div class="form-container">
             <h2>Look Up Adoption Records</h2>
             <form action="adoptionRecordsServlet" method="post">
-                <input type="submit" value="View Adoption Records">
+                <input class="button" type="submit" value="View Adoption Records">
             </form>
         </div>
         <div class="form-container">
             <h2>View Available Breeds for Adoption</h2>
             <form action="viewAllBreedsServlet" method="post">
-                <input type="submit" value="View Available Breeds">
+                <input class="button" type="submit" value="View Available Breeds">
             </form>
         </div>
         <div class="form-container">
             <h2>View Popular Breeds</h2>
             <form action="initialQuestions" method="post">
-
-                <input type="submit" value="Submit">
+                <input class="button" type="submit" value="Submit">
             </form>
         </div>
         <div class="form-container">
             <h2>Update An Adoption Record</h2>
             <form action="updateRecordServlet" method="post">
-                What's the ID of the record you'd like to update? <input type="text" name="recordId"><br>
-                <h3>Please fill in the corresponding fields with the information you'd like:</h3><br/>
-                First Name: <input type="text" name="firstName"><br>
-                Last Name: <input type="text" name="lastName"><br>
-                Breed: <input type="text" name="breed"><br>
-                Puppy Gender: <input type="text" name="gender"><br>
-                Puppy Name: <input type="text" name="puppy_name"><br>
-            <input type="submit" value="Update Record">
+                <p>What's the ID of the record you'd like to update?</p>
+                <input type="text" name="recordId">
+                <h3>Please fill in the corresponding fields with the information you'd like:</h3>
+                <p>First Name:</p>
+                <input type="text" name="firstName">
+                <p>Last Name:</p>
+                <input type="text" name="lastName">
+                <p>Breed:</p>
+                <input type="text" name="breed">
+                <p>Puppy Gender:</p>
+                <input type="text" name="gender">
+                <p>Puppy Name:</p>
+                <input type="text" name="puppy_name">
+            <input class="button" type="submit" value="Update Record">
             </form>
         </div>
         <div class="form-container">
             <h2>Delete An Adoption Record</h2>
             <form action="deleteRecordServlet" method="post">
-                What's the ID of the record you'd like to delete? <input type="text" name="recordId"><br>
-                <input type="submit" value="Delete Record">
+                <p>What's the ID of the record you'd like to delete?</p>
+                <input type="text" name="recordId">
+                <input class="button" type="submit" value="Delete Record">
             </form>
         </div>
     </div>

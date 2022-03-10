@@ -36,10 +36,11 @@ public class AdoptionRecord {
     public String breed;
     public String gender;
     public String puppy_name;
-    @ManyToOne(fetch=FetchType.EAGER, cascade = {CascadeType.ALL})
+    @ManyToOne(fetch=FetchType.EAGER, cascade = {CascadeType.MERGE})
     @JoinColumn(name="breed_id")
     private Breed breedObject;
 
+    //Constructor for testing
     public AdoptionRecord(String firstName, String lastName, String breed, String gender, String puppy_name) {
     }
 }

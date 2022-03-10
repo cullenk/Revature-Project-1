@@ -4,12 +4,60 @@
 <head>
     <title>Title</title>
 </head>
-<body style="background-color: darksalmon">
+<body>
 
 <style>
-    body{
+    body {
+        font-family: Arial;
+        line-height: 1.4;
+        background-image: linear-gradient(to bottom right, dodgerblue, darkblue);
         margin: 0;
         padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        background: white;
+        padding: 50px;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 50px auto;
+        max-width: 1200px;
+    }
+    .image-div {
+        width: 60%;
+        height: 350px;
+        background-position: center;
+        background-size: cover;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    .button {
+        padding: 10px 20px;
+        opacity: 80%;
+        font-size: 16px;
+        background-image: linear-gradient(to bottom right, dodgerblue, darkblue);
+        color: white;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: .5s ease;
+        max-width: 220px;
+        margin: 20px 0;
+        outline: none;
+        border: 1px solid dodgerblue;
+    }
+
+    .button:hover {
+        opacity: 100%;
     }
 </style>
 
@@ -18,10 +66,14 @@
     String gender = (String) request.getAttribute("gender");
     String name = (String) request.getAttribute("name");
     String chosenBreed = (String) request.getSession().getAttribute("chosenBreed");
-
+    String imageUrl = (String) request.getSession().getAttribute("imageUrl");
 %>
+<div class="container">
+    <div class="image-div" style="background-image: url(<%=imageUrl%>)"></div>
+    <h1>Congratulations <%=firstName%>! You're taking home a <%=gender%> <%=chosenBreed%> puppy named <span style="color:dodgerblue"><%=name%></span>. Take good care of it!</h1>
+    <h2>I'll go ahead and add this to our adoption records as well.</h2>
+    <a href="index.html" class="button">Return Home</a>
+</div>
 
-<h1>Congratulations <%=firstName%>! You're taking home a <%=gender%> <%=chosenBreed%> puppy named <%=name%>. Take good care of it!</h1><br/>
-<h2>I'll go ahead and add this to our adoption records as well.</h2>
 </body>
 </html>

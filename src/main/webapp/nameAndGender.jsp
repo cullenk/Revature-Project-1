@@ -5,13 +5,21 @@
 <head>
     <title>Title</title>
 </head>
-<body style="background-color: darkkhaki">
+<body>
 
 <style>
-  body{
+  body {
+    font-family: Arial;
+    line-height: 1.4;
+    background-image: linear-gradient(to bottom right, dodgerblue, darkblue);
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
+
   .container {
     display: flex;
     flex-direction: column;
@@ -32,15 +40,45 @@
     align-items: center;
   }
 
+  .image-div {
+    width: 100%;
+    min-width: 450px;
+    height: 350px;
+    background-position: center;
+    background-size: cover;
+  }
+
   h1 {
-    color: green;
-    margin: 0px;
+    color: dodgerblue;
+    font-family: "Arial Rounded MT Bold";
+    font-size: 42px;
+    margin: 20px 0;
   }
   h2 {
     margin-bottom: 0px;
   }
 h3 {
   margin-bottom: 0px;
+  color: white;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+label {
+  color: white;
+}
+
+input:hover {
+  cursor: pointer;
+}
+
+.input {
+  margin-top: 15px;
 }
 
 .name-input-div {
@@ -49,37 +87,51 @@ h3 {
   margin: 10px 0;
 }
   .button {
-    padding: 20px 40px;
-    font-size: 20px;
-    outline: none;
-    background: darkslategrey;
+    padding: 10px 20px;
+    opacity: 80%;
+    font-size: 16px;
+    background-image: linear-gradient(to bottom right, dodgerblue, darkblue);
     color: white;
     cursor: pointer;
     border-radius: 5px;
+    transition: .5s ease;
+    max-width: 220px;
+    margin: 20px 0;
+    outline: none;
+    border: 1px solid dodgerblue;
   }
 
   .button:hover {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    opacity: 100%;
   }
 </style>
 
-<%String chosenBreed = (String) request.getSession().getAttribute("chosenBreed");%>
+<%
+  String chosenBreed = (String) request.getSession().getAttribute("chosenBreed");
+  String imageUrl = (String) request.getSession().getAttribute("imageUrl");
+
+%>
 
 <div class="container">
   <div class="breed-header-div">
-    <h2>You've chosen a:</h2><br/>
+    <h2>Your Choice:</h2>
     <h1><%=chosenBreed%></h1>
+    <div class="image-div" style="background-image: url(<%=imageUrl%>)"></div>
   </div>
 
   <form action="adoptionPage" method="post">
-    <h3>Would you like your puppy to be male or female?</h3><br/>
-    <input type="radio" name="gender" value="male">
-    <label for="male">Male</label><br/>
-    <input type="radio" name="gender" value="female">
-    <label for="female">Female</label><br/>
+    <h3>Would you like your puppy to be male or female?</h3>
+    <div>
+      <input type="radio" name="gender" value="male">
+      <label for="male">Male</label>
+    </div>
+    <div>
+      <input type="radio" name="gender" value="female">
+      <label for="female">Female</label>
+    </div>
     <div class="name-input-div">
-      <p>What would you like to name your puppy?</p>
-      <input type="text" name="name"><br>
+      <label>What would you like to name your puppy?</label>
+      <input class="input" type="text" name="name">
     </div>
     <input class="button" type="submit" value="Next">
 
