@@ -1,6 +1,8 @@
 package respositories;
 
 import model.AdoptionRecord;
+import model.Breed;
+import org.apache.log4j.Logger;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -8,10 +10,13 @@ import util.HibernateUtil;
 
 import javax.persistence.Query;
 import java.io.IOException;
+import java.sql.Driver;
 import java.util.List;
 
-public class AdoptionRecordRepository {
 
+
+public class AdoptionRecordRepository {
+    public static final Logger log = Logger.getLogger(Driver.class);
     public List<AdoptionRecord> getAdoptionRecords(){
         try {
             Session session = HibernateUtil.getSession();
@@ -85,6 +90,7 @@ public class AdoptionRecordRepository {
             session.getTransaction().commit();
             if(executeUpdate > 0){
                 System.out.println("Successfully deleted the record with Id: " + id);
+                log.info("Successfully deleted the record with id" + id);
                 return true;
             }
             session.close();
@@ -93,6 +99,23 @@ public class AdoptionRecordRepository {
         }finally{
         }
         return false;
+    }
+
+    public List<AdoptionRecord> getAdoptionRecordByLastName(String lastName) throws IOException {
+        try {
+            Session session = HibernateUtil.getSession();
+            org.hibernate.query.Query query = session.createQuery("FROM AdoptionRecord WHERE lastName = :lastName", AdoptionRecord.class);
+            query.setParameter("lastName", lastName);
+            List<AdoptionRecord> returnedRecord = query.list();
+            session.close();
+            System.out.println(returnedRecord.toString());
+            log.info("Someone looked up the record for the user with the last name " + lastName);
+            return returnedRecord;
+        }catch(HibernateException | IOException e){
+            e.printStackTrace();
+        }finally{
+        }
+        return null;
     }
 
 }

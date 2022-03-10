@@ -19,7 +19,7 @@
 
   .header-div {
     width: 100%;
-    padding: 25px;
+    padding: 25px 0px;
     display: flex;
       flex-direction: column;
     align-items: center;

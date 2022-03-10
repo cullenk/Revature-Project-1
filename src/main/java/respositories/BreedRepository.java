@@ -1,18 +1,20 @@
 package respositories;
 
 import model.Breed;
+import org.apache.log4j.Logger;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import util.HibernateUtil;
 import java.io.IOException;
+import java.sql.Driver;
 import java.sql.SQLException;
 import java.util.List;
 import org.hibernate.query.Query;
 
 
 public class BreedRepository {
-
+    public static final Logger log = Logger.getLogger(Driver.class);
     public List<Breed> getAllBreeds(){
         try {
             Session session = HibernateUtil.getSession();
@@ -43,22 +45,23 @@ public class BreedRepository {
         query.setParameter("sheds", sheds);
         List<Breed> breedList = query.list();
         session.close();
+        log.info("Returned the following breed suggestions for a user:" + breedList);
         return breedList;
     }
 
- //  public boolean addBreed(Breed p){
+//   public Breed addBreed(Breed b){
 //        try {
 //            Session session = HibernateUtil.getSession();
 //            Transaction transaction = session.beginTransaction();
-//            session.persist(p);
+//            session.persist(b);
 //            transaction.commit();
 //            session.close();
-//            return true;
+//            return b;
 //
 //        }catch(HibernateException | IOException e){
 //            //e.printStackTrace();
 //        }
-//        return false;
+//       return null;
 //    }
 
 //    public Breed getBreedById(int id){

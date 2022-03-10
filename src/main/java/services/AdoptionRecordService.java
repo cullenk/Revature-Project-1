@@ -31,4 +31,8 @@ public class AdoptionRecordService {
        return true;
     }
 
+    public boolean getAdoptionRecordByLastName(String lastName) throws IOException {
+        adr.getAdoptionRecordByLastName(lastName);
+        return true;
+    }
 }

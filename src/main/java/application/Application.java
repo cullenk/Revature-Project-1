@@ -3,31 +3,32 @@ package application;
 import model.Breed;
 import services.AdoptionRecordService;
 import services.BreedService;
+import org.apache.log4j.Logger;
 
 import java.io.IOException;
+import java.sql.Driver;
 import java.util.List;
 
 public class Application {
+    public static final Logger log = Logger.getLogger(Driver.class);
     public static void main(String[] args) throws IOException {
 
+        log.info("Hello Logger!");
 
         /*To Do
-        -Add images?
-        -Add exceptions for inputs or convert to radio buttons
-        -Add Time stamp for adoption records?
-        -What to do if there are no records or null is returned
-        -Add Virtual Machine through Azure?
-        -Add logging and testing
-        -Method to just look at all the dog breed options in the system
+        -Make it pretty :)
+        -Multiplicity
+        -Exception handling?
+        -Add testing
          */
 
         BreedService breedService = new BreedService();
 //        List<Breed> returnedBreeds = breedService.getBestBreedsForUser("large", "active", "a lot");
 
-//        AdoptionRecordService recordService = new AdoptionRecordService();
+        AdoptionRecordService recordService = new AdoptionRecordService();
 
-
-//        recordService.addNewAdoptionRecord("Jennifer", "Lawrence", "French Bulldog", "male", "Peeta");
+recordService.getAdoptionRecordByLastName("Kuch");
+//        recordService.addNewAdoptionRecord("John", "Doe", "Beagle", "female", "Kenny");
 
 
 //        Breed breed = new Breed();
@@ -43,10 +44,10 @@ public class Application {
 //        session.getTransaction().commit();
 //        session.close();
 
-        List<Breed> allBreeds = breedService.getAllBreeds();
-        for(Breed b : allBreeds){
-            System.out.println(b.breed);
-        }
+//        List<Breed> allBreeds = breedService.getAllBreeds();
+//        for(Breed b : allBreeds){
+//            System.out.println(b.breed);
+//        }
 
 //        for(Breed breeds : returnedBreeds){
 //            System.out.println(breeds.breed);

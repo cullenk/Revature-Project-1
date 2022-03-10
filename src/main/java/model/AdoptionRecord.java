@@ -2,9 +2,7 @@ package model;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 import javax.persistence.*;
 import javax.persistence.Id;
@@ -22,6 +20,8 @@ import java.util.Collection;
 )
 
 //Lombok annotations
+@NoArgsConstructor
+@AllArgsConstructor
 @Getter
 @Setter
 @ToString
@@ -31,19 +31,16 @@ public class AdoptionRecord {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "adoption_id", updatable = false, nullable = false)
     public int adoption_id;
-    //Can also use @Column to define column name, or @Transient to ignore this data value and not create a column
     public String firstName;
     public String lastName;
     public String breed;
     public String gender;
     public String puppy_name;
-    @ManyToOne
+    @ManyToOne(fetch=FetchType.EAGER, cascade = {CascadeType.ALL})
     @JoinColumn(name="breed_id")
     private Breed breedObject;
 
-    //The column breed_id can take in a Breed object inside the cell. I need to get the breed
-    // the user chose and get the ID of that breed to populate this cell.
-
-
+    public AdoptionRecord(String firstName, String lastName, String breed, String gender, String puppy_name) {
     }
+}
 

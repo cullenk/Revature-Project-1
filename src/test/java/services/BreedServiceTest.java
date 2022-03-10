@@ -2,6 +2,7 @@ package services;
 
 import model.Breed;
 import org.junit.jupiter.api.Test;
+import org.mockito.Mockito;
 
 import java.io.IOException;
 import java.util.List;
@@ -10,15 +11,15 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class BreedServiceTest {
 
-//    @Test
-//    void GetAllBreeds() throws IOException {
-//        BreedService breedService = new BreedService();
-//        List<Breed> allBreedsList = breedService.getAllBreeds();
-//    }
+    BreedService breedService = Mockito.mock(BreedService.class);
 
     @Test
-    void GetBreedDetails() throws IOException {
-        BreedService breedService = new BreedService();
+    void GetsAllBreeds() throws IOException {
+        List<Breed> allBreedsList = breedService.getAllBreeds();
+    }
+
+    @Test
+    void GetsBreedDetails() throws IOException {
         List<Breed> testBreed = breedService.getBreedDetails("Mastiff");
         for (Breed b : testBreed) {
             assertTrue(b.breed.equalsIgnoreCase("Mastiff"));
@@ -27,7 +28,6 @@ class BreedServiceTest {
 
     @Test
     void GetsOnlyTheBreedsBestSuitedForUser() throws IOException {
-        BreedService breedService = new BreedService();
         String size = "large";
         String temperament = "mellow";
         String sheds = "a little";
