@@ -46,7 +46,7 @@
     .breed-option-div {
         background: white;
         border-radius: 5px;
-        height: 300px;
+        height: 400px;
         width: 400px;
         padding: 20px;
         margin: 15px;

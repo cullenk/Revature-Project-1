@@ -23,7 +23,6 @@
           <element id="library" level="project" name="Maven: org.junit.jupiter:junit-jupiter-engine:5.8.1" />
           <element id="library" level="project" name="Maven: org.junit.platform:junit-platform-engine:1.8.1" />
           <element id="library" level="project" name="Maven: log4j:log4j:1.2.17" />
-          <element id="library" level="project" name="Maven: org.slf4j:slf4j-log4j12:1.6.4" />
           <element id="library" level="project" name="Maven: com.microsoft.sqlserver:mssql-jdbc:10.2.0.jre11" />
           <element id="library" level="project" name="Maven: net.bytebuddy:byte-buddy:1.12.7" />
           <element id="library" level="project" name="Maven: javax.servlet:javax.servlet-api:4.0.1" />

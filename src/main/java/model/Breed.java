@@ -13,7 +13,7 @@ import java.util.Collection;
 
 // POJO
 @Entity
-@Table(name="breeds")
+@Table(name="all_breeds")
 @JsonIdentityInfo(
         //this is to stop recursive hibernate joins
         generator = ObjectIdGenerators.PropertyGenerator.class,
@@ -22,7 +22,6 @@ import java.util.Collection;
 //Lombok annotations
 @Getter
 @Setter
-@ToString
 public class Breed {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

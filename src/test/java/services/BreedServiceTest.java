@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class BreedServiceTest {
 
-    BreedService breedService = Mockito.mock(BreedService.class);
+    BreedService breedService = new BreedService();
 
     @Test
     void GetsAllBreeds() throws IOException {
@@ -36,4 +36,12 @@ class BreedServiceTest {
             assertTrue(b.size.equalsIgnoreCase("large"));
         }
     }
+
+    @Test
+    void GetsTheBreedByName() throws IOException {
+        String breedName = "Pug";
+        Breed matchingBreed = breedService.getBreedByName(breedName);
+        assertTrue(matchingBreed.breed.equalsIgnoreCase(breedName));
+    }
+
 }

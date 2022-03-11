@@ -93,7 +93,7 @@
             background: white;
             box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
             padding: 20px 40px;
-            margin: 20px;
+            margin: 40px 20px;
             transition: .5s ease;
             border-radius: 5px;
         }
@@ -109,6 +109,7 @@
 
         input {
             margin: 10px 0px;
+            max-width: 300px;
         }
         .button {
             padding: 10px 20px;
@@ -180,14 +181,14 @@
                     <label>Active</label>
                 </div>
 
-                <p>Would you prefer if your puppy shed a lot or a little?</p>
+                <p>Do you care if your puppy is easy to groom?</p>
                 <div class="radio-div">
                     <input type="radio" name="sheds" value="a lot" required>
-                    <label>A Lot</label>
+                    <label>No</label>
                 </div>
                 <div class="radio-div">
                     <input type="radio" name="sheds" value="a little" required>
-                    <label>A Little</label>
+                    <label>Yes</label>
                 </div>
                 <input class="button" type="submit" value="Get Your Matches">
             </form>
@@ -200,19 +201,19 @@
             </form>
         </div>
         <div class="form-container">
-            <h2>View Available Breeds for Adoption</h2>
+            <h2>View Breeds Available for Adoption</h2>
             <h3>If you want to see a complete list of all the puppy breeds we currently have available for adoption, click below.</h3>
             <form action="viewAllBreedsServlet" method="post">
                 <input class="button" type="submit" value="View Available Breeds">
             </form>
         </div>
-        <div class="form-container">
-            <h2>View Popular Breeds</h2>
-            <h3>This is where you can see a list of the most popular breeds based on adoption frequency.</h3>
-            <form action="initialQuestions" method="post">
-                <input class="button" type="submit" value="Submit">
-            </form>
-        </div>
+<!--        <div class="form-container">-->
+<!--            <h2>View Popular Breeds</h2>-->
+<!--            <h3>This is where you can see a list of the most popular breeds based on adoption frequency.</h3>-->
+<!--            <form action="initialQuestions" method="post">-->
+<!--                <input class="button" type="submit" value="Submit">-->
+<!--            </form>-->
+<!--        </div>-->
         <div class="form-container">
             <h2>Update An Adoption Record</h2>
             <h3>Do you need to make a change to an existing adoption record? Update the record using the form below.</h3>
@@ -243,37 +244,6 @@
             </form>
         </div>
     </div>
-
-<!--    <script>-->
-
-<!--        //Validate Initial Question Form-->
-<!--        let initialQuestionsForm = document.getElementById("initialQuestionsForm");-->
-<!--        initialQuestionsForm.addEventListener('submit', (e) => {-->
-<!--            let size = initialQuestionsForm.getElementsByTagName("input")[2].value;-->
-<!--            let temperament = initialQuestionsForm.getElementsByTagName("input")[3].value;-->
-<!--            let sheds = initialQuestionsForm.getElementsByTagName("input")[4].value;-->
-<!--            let messages = [];-->
-<!--            const errorDiv = document.querySelector(".error-div");-->
-
-<!--            if (size !== 'small' || size !== 'medium' || size !== 'large'){-->
-<!--                messages.push("Please provide a valid size of small, medium or large.");-->
-<!--            }-->
-
-<!--            if (temperament !== 'mellow' || temperament !== 'active'){-->
-<!--                messages.push("Please provide a valid temperament of mellow or active.");-->
-<!--            }-->
-
-<!--            if (sheds !== 'a little' || sheds !== 'a lot') {-->
-<!--                messages.push("Please provide a valid shedding amount of a little or a lot.")-->
-<!--            }-->
-
-<!--            if(messages.length > 0){-->
-<!--                e.preventDefault();-->
-<!--                errorDiv.innerText = messages.join(', ')-->
-<!--            }-->
-<!--        })-->
-
-<!--    </script>-->
 
 </body>
 </html>

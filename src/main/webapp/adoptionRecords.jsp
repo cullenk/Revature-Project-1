@@ -32,6 +32,10 @@
         max-width: 1200px;
     }
 
+    h1 {
+        margin: 0px auto 20px auto;
+    }
+
     .id-div {
         background-color: dodgerblue;
         font-size: 20px;
@@ -80,6 +84,7 @@
 %>
 
 <div class="container">
+    <h1>Current Adoption Records:</h1>
     <% for (AdoptionRecord ar : adoptionRecordList){ %>
     <div class="record-div">
         <div class="id-div">

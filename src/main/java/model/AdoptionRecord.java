@@ -24,7 +24,6 @@ import java.util.Collection;
 @AllArgsConstructor
 @Getter
 @Setter
-@ToString
 public class AdoptionRecord {
 
     @Id
@@ -40,8 +39,5 @@ public class AdoptionRecord {
     @JoinColumn(name="breed_id")
     private Breed breedObject;
 
-    //Constructor for testing
-    public AdoptionRecord(String firstName, String lastName, String breed, String gender, String puppy_name) {
-    }
 }
 

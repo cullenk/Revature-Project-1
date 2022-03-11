@@ -16,22 +16,14 @@ public class Application {
 
         log.info("Hello Logger!");
 
-        /*To Do
-        -Multiplicity
-        -Exception handling for typos or no results found.
-        -My VM works but it shows the basic Tomcat startup page, not my project.
-         */
-
         AdoptionRecordService recordService = new AdoptionRecordService();
         BreedService breedService = new BreedService();
-//        List<Breed> returnedBreeds = breedService.getBestBreedsForUser("large", "active", "a lot");
-
         List<Breed> returnedBreeds = breedService.getBestBreedsForUser("large", "active", "a lot");
 
-        List<AdoptionRecord> returnedRecords = recordService.getAdoptionRecordById(5);
+//        List<Breed> returnedBreeds = breedService.getBestBreedsForUser("small", "active", "a lot");
+
+//        List<AdoptionRecord> returnedRecords = recordService.getAdoptionRecordById(5);
 //        recordService.addNewAdoptionRecord("Alex", "Levy", "Dalmatian", "male", "Roger");
-
-
 
 //        for(AdoptionRecord ar : returnedRecords){
 //            System.out.println(ar.adoption_id);
@@ -42,9 +34,13 @@ public class Application {
 //            System.out.println(ar.getBreedObject().breed_id);
 //        }
 
-        for(Breed breeds : returnedBreeds){
-            System.out.println(breeds.breed);
-        }
+//        for(Breed breeds : returnedBreeds){
+//            System.out.println(breeds.breed);
+//        }
+
+        String breedName = "Pug";
+        Breed matchingBreed = breedService.getBreedByName(breedName);
+        System.out.println(matchingBreed.breed);
 
     }
 

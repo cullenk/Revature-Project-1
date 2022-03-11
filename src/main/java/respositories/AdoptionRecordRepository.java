@@ -51,6 +51,8 @@ public class AdoptionRecordRepository {
             Breed chosenBreed = breedService.getBreedByName(breed);
             newRecord.setBreedObject(chosenBreed);
 
+            log.info("Adoption Record Added: " + firstName + " " + lastName + " adopted a " + gender + " " + breed + "named " + puppy_name);
+
             session.persist(newRecord);
             transaction.commit();
             session.close();
@@ -78,6 +80,7 @@ public class AdoptionRecordRepository {
             session.getTransaction().commit();
             if(executeUpdate > 0){
                 System.out.println("Successfully updated the record with Id: " + id);
+                log.info("Adoption Record Updated: " + id + " " + firstName + " " + lastName + " adopted a " + gender + " " + breed + "named " + puppy_name);
                 return true;
             }
         }catch(HibernateException | IOException e){
@@ -98,7 +101,7 @@ public class AdoptionRecordRepository {
             session.getTransaction().commit();
             if(executeUpdate > 0){
                 System.out.println("Successfully deleted the record with Id: " + id);
-                log.info("Successfully deleted the record with id" + id);
+                log.info("Successfully deleted the record with id " + id);
                 return true;
             }
             session.close();

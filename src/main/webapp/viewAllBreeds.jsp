@@ -70,6 +70,10 @@
       background-size: cover;
   }
 
+  .breed-name {
+      text-align: center;
+  }
+
   .button {
       padding: 10px 20px;
       opacity: 80%;

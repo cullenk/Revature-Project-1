@@ -85,7 +85,7 @@
 %>
 
 <div class="container">
-    <p>You've successfully update the adoption record. Here is what the new record looks like: </p>
+    <p>You've successfully updated the adoption record. Here is what the new record looks like: </p>
     <div class="record-div">
         <div class="id-div">
             <p>#<%=recordId%></p>

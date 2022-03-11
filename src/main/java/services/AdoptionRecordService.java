@@ -31,9 +31,9 @@ public class AdoptionRecordService {
        return true;
     }
 
-    public boolean getAdoptionRecordByLastName(String lastName) throws IOException {
-        adr.getAdoptionRecordByLastName(lastName);
-        return true;
+    public List<AdoptionRecord> getAdoptionRecordByLastName(String lastName) throws IOException {
+        List<AdoptionRecord> returnedRecordList = adr.getAdoptionRecordByLastName(lastName);
+        return returnedRecordList;
     }
 
     public List<AdoptionRecord> getAdoptionRecordById(int id) throws IOException {

@@ -17,8 +17,13 @@ import java.util.List;
 public class InitialQuestionsServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        PrintWriter out = response.getWriter();
-        out.println("Inside Initial Questions Servlet");
+        //If breeds are not found
+        response.getWriter().println("<html>");
+        response.getWriter().println("<body style='background-color: dodgerblue; display: flex; flex-direction: column; justify-content: center; align-items: center;'>");
+        response.getWriter().println("<h1>Hmm, I couldn't find any breeds that match your preferences.</h1>");
+        response.getWriter().println("<a style='text-decoration: none; color: white;' href='index.html'>Return Home</a>");
+        response.getWriter().println("</body>");
+        response.getWriter().println("</html>");
 
         String firstName = request.getParameter("firstName");
         String lastName = request.getParameter("lastName");
@@ -28,16 +33,18 @@ public class InitialQuestionsServlet extends HttpServlet {
 
         BreedService breedService = new BreedService();
         List<Breed> returnedBreeds = breedService.getBestBreedsForUser(size, temperament, sheds);
-        out.println("Working");
+
 
         //Set the queried list to a value to pass along
         request.getSession().setAttribute("firstName", firstName);
         request.getSession().setAttribute("lastName", lastName);
         request.setAttribute("returnedBreeds", returnedBreeds);
 
-        //Forward to response data to .jsp file.
-        RequestDispatcher rd = request.getRequestDispatcher("initialQuestions.jsp");
-        rd.forward(request, response);
+        //Forward to response data to .jsp file if results found
+            RequestDispatcher rd = request.getRequestDispatcher("initialQuestions.jsp");
+            rd.forward(request, response);
+
+
 
     }
 }
