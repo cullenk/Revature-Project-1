@@ -38,7 +38,7 @@
         font-size: 20px;
         color: white;
         padding: 20px;
-        margin: 25px auto;
+        margin-right: 10px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -46,6 +46,16 @@
         width: 10px;
         border-radius: 50%;
         box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
+
+    .record-div {
+        display: flex;
+        align-items: center;
+        text-decoration: line-through;
+    }
+
+    .details-text {
+        font-size: 24px;
     }
     .button {
         padding: 10px 20px;
@@ -68,11 +78,25 @@
 </style>
 
 <%
-  int recordId = (int) request.getAttribute("recordId");
+    int recordId = (int) request.getAttribute("recordId");
+    String firstName = (String) request.getAttribute("firstName");
+    String lastName = (String) request.getAttribute("lastName");
+    String breed = (String) request.getAttribute("breed");
+    String gender = (String) request.getAttribute("gender");
+    String puppy_name = (String) request.getAttribute("puppy_name");
 %>
+
+
 <div class="container">
-    <h1>You've successfully deleted the adoption record with the id of:</h1>
-    <div class="id-div"><%=recordId%></div>
+    <h1>You've successfully deleted the adoption record with the ID of <span style="color: dodgerblue"><%=recordId%>.</span></h1>
+    <div class="record-div">
+        <div class="id-div">
+            <p>#<%=recordId%></p>
+        </div>
+        <div class="details-div">
+            <p class="details-text"><%=firstName%> <%=lastName%> adopted a <%=gender%> <%=breed%> puppy named <%=puppy_name%>.</p>
+        </div>
+    </div>
     <a href="index.html" class="button">Return Home</a>
 </div>
 

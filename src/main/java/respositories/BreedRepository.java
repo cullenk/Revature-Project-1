@@ -64,24 +64,23 @@ public class BreedRepository {
 //       return null;
 //    }
 
-//    public Breed getBreedById(int id){
-//        try {
-//            Session session = HibernateUtil.getSession();
-//            Query query = session.createQuery("FROM Breed WHERE breed_id = :id", Breed.class);
-//            query.setParameter("id", id);
-//            List<Breed> breedList = query.list();
-//            session.close();
-//            if(breedList.size()==1){
-//                return breedList.get(0);
-//            }else{
-//                return null;
-//            }
-//        }catch(HibernateException | IOException e){
-//            e.printStackTrace();
-//        }finally{
-//        }
-//        return null;
-//    }
-
+    public Breed getBreedByName(String breed){
+        try {
+            Session session = HibernateUtil.getSession();
+            Query query = session.createQuery("FROM Breed WHERE breed = :breed", Breed.class);
+            query.setParameter("breed", breed);
+            List<Breed> breedList = query.list();
+            session.close();
+            if(breedList.size()==1){
+                return breedList.get(0);
+            }else{
+                return null;
+            }
+        }catch(HibernateException | IOException e){
+            e.printStackTrace();
+        }finally{
+        }
+        return null;
+    }
 
 }

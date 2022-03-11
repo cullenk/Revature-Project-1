@@ -15,6 +15,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            line-height: 1.4;
         }
 
         html {
@@ -29,6 +30,8 @@
             background-size: cover;
             background-position: center;
             z-index: 0;
+            display: flex;
+            align-items: center;
         }
 
         .hero-overlay{
@@ -40,12 +43,11 @@
         }
 
         .hero-content-div{
-            margin-top: 80px;
             height: 100%;
             width: 50%;
             display: flex;
             flex-direction: column;
-            justify-content: left;
+            justify-content: center;
             align-items: flex-start;
             padding: 50px;
             z-index: 5;
@@ -55,7 +57,8 @@
             font-family: "Arial Rounded MT Bold";
             color: dodgerblue;
             margin-bottom: 5px;
-            font-size: 42px;
+            font-size: 56px;
+            line-height: 1.4;
         }
 
         .hero-paragraph {
@@ -63,6 +66,7 @@
             margin-bottom: 20px;
             max-width: 500px;
             font-size: 24px;
+            line-height: 1.4;
         }
 
         a {
@@ -73,6 +77,11 @@
         h2 {
             margin: 10px 0;
             font-size: 28px;
+        }
+
+        h3 {
+            color: #333;
+            margin-bottom: 0;
         }
 
         p {
@@ -131,7 +140,7 @@
     <div class="hero-div">
         <div class="hero-overlay"></div>
         <div class="hero-content-div">
-            <h1>Cullen's Puppy Adoption App</h1>
+            <h1 class="logo">Cullen's Puppy Adoption App</h1>
             <p class="hero-paragraph">The Java-based, servlet-comprised and Tomcat-hosted site for all of your puppy needs.</p>
             <a class="button" href="#forms">Get Started</a>
         </div>
@@ -140,68 +149,131 @@
     <div id="forms" class="forms-main-container">
         <div class="form-container">
             <h2>Find and Adopt a Puppy For You!</h2>
-            <form action="initialQuestions" method="post">
+            <h3>Fill out the form below and we'll show you a list of dog breeds that will be best suited for you.</h3>
+            <form id="initialQuestionsForm" action="initialQuestions" method="post">
                 <p>What's your first name?</p>
-                <input type="text" name="firstName">
+                <input type="text" name="firstName" required>
                 <p>What's your last name?</p>
-                <input type="text" name="lastName">
+                <input type="text" name="lastName" required>
+
                 <p>Do you want a puppy that will grow to be small, medium or large in size?</p>
-                <input type="text" name="size">
+                <div class="radio-div">
+                    <input type="radio" name="size" value="small" required>
+                    <label>Small</label>
+                </div>
+                <div class="radio-div">
+                    <input type="radio" name="size" value="medium" required>
+                    <label>Medium</label>
+                </div>
+                <div class="radio-div">
+                    <input type="radio" name="size" value="large" required>
+                    <label>Large</label>
+                </div>
+
                 <p>Would you like your puppy to be more mellow or active in nature?</p>
-                <input type="text" name="temperament">
+                <div class="radio-div">
+                    <input type="radio" name="temperament" value="mellow" required>
+                    <label>Mellow</label>
+                </div>
+                <div class="radio-div">
+                    <input type="radio" name="temperament" value="active" required>
+                    <label>Active</label>
+                </div>
+
                 <p>Would you prefer if your puppy shed a lot or a little?</p>
-                <input type="text" name="sheds">
-                <input class="button" type="submit" value="Submit">
+                <div class="radio-div">
+                    <input type="radio" name="sheds" value="a lot" required>
+                    <label>A Lot</label>
+                </div>
+                <div class="radio-div">
+                    <input type="radio" name="sheds" value="a little" required>
+                    <label>A Little</label>
+                </div>
+                <input class="button" type="submit" value="Get Your Matches">
             </form>
         </div>
         <div class="form-container">
             <h2>Look Up Adoption Records</h2>
+            <h3>Here is where you can find a list of all the adoptions that have taken place and their accompanying details.</h3>
             <form action="adoptionRecordsServlet" method="post">
                 <input class="button" type="submit" value="View Adoption Records">
             </form>
         </div>
         <div class="form-container">
             <h2>View Available Breeds for Adoption</h2>
+            <h3>If you want to see a complete list of all the puppy breeds we currently have available for adoption, click below.</h3>
             <form action="viewAllBreedsServlet" method="post">
                 <input class="button" type="submit" value="View Available Breeds">
             </form>
         </div>
         <div class="form-container">
             <h2>View Popular Breeds</h2>
+            <h3>This is where you can see a list of the most popular breeds based on adoption frequency.</h3>
             <form action="initialQuestions" method="post">
                 <input class="button" type="submit" value="Submit">
             </form>
         </div>
         <div class="form-container">
             <h2>Update An Adoption Record</h2>
+            <h3>Do you need to make a change to an existing adoption record? Update the record using the form below.</h3>
             <form action="updateRecordServlet" method="post">
                 <p>What's the ID of the record you'd like to update?</p>
-                <input type="text" name="recordId">
+                <input type="text" name="recordId" required>
                 <h3>Please fill in the corresponding fields with the information you'd like:</h3>
                 <p>First Name:</p>
-                <input type="text" name="firstName">
+                <input type="text" name="firstName" required>
                 <p>Last Name:</p>
-                <input type="text" name="lastName">
+                <input type="text" name="lastName" required>
                 <p>Breed:</p>
-                <input type="text" name="breed">
+                <input type="text" name="breed" required>
                 <p>Puppy Gender:</p>
-                <input type="text" name="gender">
+                <input type="text" name="gender" required>
                 <p>Puppy Name:</p>
-                <input type="text" name="puppy_name">
+                <input type="text" name="puppy_name" required>
             <input class="button" type="submit" value="Update Record">
             </form>
         </div>
         <div class="form-container">
             <h2>Delete An Adoption Record</h2>
+            <h3>Need to delete a record? Provide us with the record ID and we'll go ahead and do that for you.</h3>
             <form action="deleteRecordServlet" method="post">
                 <p>What's the ID of the record you'd like to delete?</p>
-                <input type="text" name="recordId">
+                <input type="text" name="recordId" required>
                 <input class="button" type="submit" value="Delete Record">
             </form>
         </div>
     </div>
 
+<!--    <script>-->
 
+<!--        //Validate Initial Question Form-->
+<!--        let initialQuestionsForm = document.getElementById("initialQuestionsForm");-->
+<!--        initialQuestionsForm.addEventListener('submit', (e) => {-->
+<!--            let size = initialQuestionsForm.getElementsByTagName("input")[2].value;-->
+<!--            let temperament = initialQuestionsForm.getElementsByTagName("input")[3].value;-->
+<!--            let sheds = initialQuestionsForm.getElementsByTagName("input")[4].value;-->
+<!--            let messages = [];-->
+<!--            const errorDiv = document.querySelector(".error-div");-->
+
+<!--            if (size !== 'small' || size !== 'medium' || size !== 'large'){-->
+<!--                messages.push("Please provide a valid size of small, medium or large.");-->
+<!--            }-->
+
+<!--            if (temperament !== 'mellow' || temperament !== 'active'){-->
+<!--                messages.push("Please provide a valid temperament of mellow or active.");-->
+<!--            }-->
+
+<!--            if (sheds !== 'a little' || sheds !== 'a lot') {-->
+<!--                messages.push("Please provide a valid shedding amount of a little or a lot.")-->
+<!--            }-->
+
+<!--            if(messages.length > 0){-->
+<!--                e.preventDefault();-->
+<!--                errorDiv.innerText = messages.join(', ')-->
+<!--            }-->
+<!--        })-->
+
+<!--    </script>-->
 
 </body>
 </html>

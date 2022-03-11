@@ -35,4 +35,12 @@ public class AdoptionRecordService {
         adr.getAdoptionRecordByLastName(lastName);
         return true;
     }
+
+    public List<AdoptionRecord> getAdoptionRecordById(int id) throws IOException {
+        return adr.getAdoptionRecordById(id);
+    }
+
+    public List<AdoptionRecord> getMostPopularBreeds() throws IOException {
+        return adr.getMostPopularBreeds();
+    }
 }

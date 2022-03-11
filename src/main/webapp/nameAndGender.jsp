@@ -30,7 +30,7 @@
   }
 
   .breed-header-div {
-    padding: 20px 40px;
+    padding: 20px 40px 40px;
     border-radius: 5px;
     border: 1px solid rgba(0, 0, 0, 0.19);
     background: white;
@@ -46,6 +46,8 @@
     height: 350px;
     background-position: center;
     background-size: cover;
+    border: 5px solid dodgerblue;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   }
 
   h1 {
@@ -122,16 +124,16 @@ input:hover {
   <form action="adoptionPage" method="post">
     <h3>Would you like your puppy to be male or female?</h3>
     <div>
-      <input type="radio" name="gender" value="male">
-      <label for="male">Male</label>
+      <input type="radio" name="gender" value="male" required>
+      <label>Male</label>
     </div>
     <div>
-      <input type="radio" name="gender" value="female">
-      <label for="female">Female</label>
+      <input type="radio" name="gender" value="female" required>
+      <label>Female</label>
     </div>
     <div class="name-input-div">
       <label>What would you like to name your puppy?</label>
-      <input class="input" type="text" name="name">
+      <input class="input" type="text" name="name" required>
     </div>
     <input class="button" type="submit" value="Next">
 

@@ -25,5 +25,8 @@ public class BreedService {
         return br.getBestBreedsForUser(size, temperament, sheds);
     }
 
+    public Breed getBreedByName(String breed){
+        return br.getBreedByName(breed);
+    }
 
 }

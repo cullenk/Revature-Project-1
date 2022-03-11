@@ -1,5 +1,6 @@
 package application;
 
+import model.AdoptionRecord;
 import model.Breed;
 import services.AdoptionRecordService;
 import services.BreedService;
@@ -18,42 +19,33 @@ public class Application {
         /*To Do
         -Multiplicity
         -Exception handling for typos or no results found.
-        -Finish testing/mockito
+        -My VM works but it shows the basic Tomcat startup page, not my project.
          */
+
         AdoptionRecordService recordService = new AdoptionRecordService();
         BreedService breedService = new BreedService();
+//        List<Breed> returnedBreeds = breedService.getBestBreedsForUser("large", "active", "a lot");
+
         List<Breed> returnedBreeds = breedService.getBestBreedsForUser("large", "active", "a lot");
 
+        List<AdoptionRecord> returnedRecords = recordService.getAdoptionRecordById(5);
+//        recordService.addNewAdoptionRecord("Alex", "Levy", "Dalmatian", "male", "Roger");
 
 
-//        recordService.getAdoptionRecordByLastName("Kuch");
-//        recordService.addNewAdoptionRecord("Jane", "Doe", "Poodle", "female", "Daisy");
 
-
-//        Breed breed = new Breed();
-//
-//        breed.getNumberOfAdoptions().add(newRecord);
-//        breed.getNumberOfAdoptions().add(newRecord2);
-
-//        Session session = HibernateUtil.getSession();
-//        session.beginTransaction();
-//        session.save(breed);
-//        session.save(newRecord);
-//        session.save(newRecord2);
-//        session.getTransaction().commit();
-//        session.close();
-
-//        List<Breed> allBreeds = breedService.getAllBreeds();
-//        for(Breed b : allBreeds){
-//            System.out.println(b.breed);
+//        for(AdoptionRecord ar : returnedRecords){
+//            System.out.println(ar.adoption_id);
+//            System.out.println(ar.firstName);
+//            System.out.println(ar.lastName);
+//            System.out.println(ar.breed);
+//            System.out.println(ar.puppy_name);
+//            System.out.println(ar.getBreedObject().breed_id);
 //        }
 
         for(Breed breeds : returnedBreeds){
             System.out.println(breeds.breed);
         }
 
-//        Menu mainMenu = new Menu();
-//        mainMenu.createMenu();
     }
 
 }

@@ -28,6 +28,7 @@ public class InitialQuestionsServlet extends HttpServlet {
 
         BreedService breedService = new BreedService();
         List<Breed> returnedBreeds = breedService.getBestBreedsForUser(size, temperament, sheds);
+        out.println("Working");
 
         //Set the queried list to a value to pass along
         request.getSession().setAttribute("firstName", firstName);
@@ -38,6 +39,5 @@ public class InitialQuestionsServlet extends HttpServlet {
         RequestDispatcher rd = request.getRequestDispatcher("initialQuestions.jsp");
         rd.forward(request, response);
 
-//
     }
 }

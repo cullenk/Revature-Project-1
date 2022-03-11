@@ -4,8 +4,10 @@ import model.AdoptionRecord;
 import model.Breed;
 import org.apache.log4j.Logger;
 import org.hibernate.HibernateException;
+import org.hibernate.SQLQuery;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import services.BreedService;
 import util.HibernateUtil;
 
 import javax.persistence.Query;
@@ -28,6 +30,8 @@ public class AdoptionRecordRepository {
         }finally{
         }
         return null;
+
+
     }
 
     public AdoptionRecord addNewAdoptionRecord(String firstName, String lastName, String breed, String gender, String puppy_name){
@@ -42,6 +46,10 @@ public class AdoptionRecordRepository {
             newRecord.setGender(gender);
             newRecord.setPuppy_name(puppy_name);
 
+            //Get the breed object to set the multiplicity relationship (breed_id)
+            BreedService breedService = new BreedService();
+            Breed chosenBreed = breedService.getBreedByName(breed);
+            newRecord.setBreedObject(chosenBreed);
 
             session.persist(newRecord);
             transaction.commit();
@@ -118,4 +126,32 @@ public class AdoptionRecordRepository {
         return null;
     }
 
+    public List<AdoptionRecord> getAdoptionRecordById(int id) throws IOException {
+        try {
+            Session session = HibernateUtil.getSession();
+            org.hibernate.query.Query query = session.createQuery("FROM AdoptionRecord WHERE adoption_id = :id", AdoptionRecord.class);
+            query.setParameter("id", id);
+            List<AdoptionRecord> returnedRecord = query.list();
+            session.close();
+            return returnedRecord;
+        }catch(HibernateException | IOException e){
+            e.printStackTrace();
+        }finally{
+        }
+        return null;
+    }
+
+    public List<AdoptionRecord> getMostPopularBreeds() throws IOException {
+        try {
+            Session session = HibernateUtil.getSession();
+            SQLQuery query = session.createSQLQuery("SELECT breed_id, COUNT('breed_id') AS 'number_of_adoptions' FROM adoption_history GROUP BY breed_id ORDER BY 'number_of_adoptions' DESC");
+            List<AdoptionRecord> returnedRecords = query.list();
+            session.close();
+            return returnedRecords;
+        } catch (HibernateException | IOException e) {
+            e.printStackTrace();
+        } finally {
+        }
+        return null;
+    }
 }

@@ -35,9 +35,18 @@ public class updateRecordServlet extends HttpServlet {
         request.setAttribute("gender", gender);
         request.setAttribute("puppy_name", puppy_name);
 
-        //Forward to response data to .jsp file
-        RequestDispatcher rd = request.getRequestDispatcher("updateRecord.jsp");
-        rd.forward(request, response);
+        //Forward to response data to .jsp file if it's a valid record to begin with
+        if(firstName != null){
+            RequestDispatcher rd = request.getRequestDispatcher("updateRecord.jsp");
+            rd.forward(request, response);
+        } else {
+            response.getWriter().println("<html>");
+            response.getWriter().println("<body style='background-color: dodgerblue; display: flex; flex-direction: column; justify-content: center; align-items: center;'>");
+            response.getWriter().println("<h1>Oops, that Record ID didn't exist!</h1>");
+            response.getWriter().println("<a style='text-decoration: none; color: white;' href='index.html'>Return Home</a>");
+            response.getWriter().println("</body>");
+            response.getWriter().println("</html>");
+        }
 
     }
 }

@@ -62,6 +62,12 @@
         width: 100%;
         background-position: center;
         background-size: cover;
+        border: 5px solid dodgerblue;
+        transition: .5s ease;
+    }
+
+    .breed-image-div:hover {
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     }
 
     .label-div {
@@ -116,7 +122,7 @@
             <div class="breed-option-div">
                 <div class="breed-image-div" style="background-image: url(<%=b.image_url%>)"></div>
                 <div class="label-div">
-                    <input type="radio" name="chosenBreed" value="<%=b.breed%>">
+                    <input type="radio" name="chosenBreed" value="<%=b.breed%>" required>
                     <label for="<%=b.breed%>"><%=b.breed%></label><br/>
                 </div>
             </div>
